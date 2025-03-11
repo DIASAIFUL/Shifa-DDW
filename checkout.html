@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="index.html">MyLogo</a>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <a href="cart.html" class="cart-btn">
+        <i class="fas fa-shopping-cart"></i> Cart
+    </a>
+
+  <!-- Hamburger Menu -->
+  <button class="hamburger">
+      <i class="fas fa-bars bar-icon"></i> <!-- Default -->
+      <i class="fas fa-times close-icon"></i> <!-- Hidden initially -->
+  </button>
+</header>
+<!-- <section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Welcome to Our World</h1>
+    <p class="hero-subtitle">We provide custom software solutions to transform your business.</p>
+    <a href="#services" class="cta-btn">Get Started</a>
+  </div>
+</section> -->
+
+
+
+<section class="checkout-section">
+    <h2>Checkout</h2>
+    
+    <form class="checkout-form">
+        <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Enter your full name" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="address">Shipping Address</label>
+            <input type="text" id="address" placeholder="Enter your shipping address" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="Enter your city" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="postal-code">Postal Code</label>
+            <input type="text" id="postal-code" placeholder="Enter your postal code" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" required>
+                <option value="">Select Country</option>
+                <option value="USA">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Australia">Australia</option>
+            </select>
+        </div>
+    
+        <div class="form-group">
+            <label for="payment-method">Payment Method</label>
+            <select id="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank Transfer</option>
+            </select>
+        </div>
+    
+        <button type="submit" class="Order-btn">Place Order</button>
+    </form>
+    
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

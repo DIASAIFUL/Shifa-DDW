@@ -1,0 +1,645 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #222;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('image/Background 27.png') no-repeat center center/cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-btn {
+    padding: 10px 20px;
+    background: #ff9800;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+p {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: auto;
+    color: #555;
+}
+
+/* Wellness Services Section */
+.wellness-services {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 80px 20px;
+    background: #f9f9f9;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.wellness-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.wellness-image img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.wellness-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.wellness-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.wellness-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.wellness-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.wellness-content ul li {
+    font-size: 1.1rem;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.wellness-content ul li::before {
+    content: '✔';
+    color: #ff9800;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #e68900;
+}
+
+/* Shop Our Wellness Products */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+}
+
+.product-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 280px;
+}
+
+.product-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff5722;
+    margin-top: 10px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wellness-services {
+        flex-direction: column;
+        text-align: center;
+    }
+    .wellness-content {
+        text-align: center;
+        max-width: 100%;
+    }
+    .wellness-image {
+        max-width: 100%;
+    }
+    .products-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Blog Grid: Each Blog in One Row */
+.blog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Blog Item: Two Containers (Image + Content) */
+.blog-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    gap: 30px;
+}
+
+/* Hover Effect */
+.blog-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Image Container */
+.blog-image {
+    flex: 1;
+    max-width: 40%;
+}
+
+.blog-image img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Blog Content Container */
+.blog-content {
+    flex: 1;
+    max-width: 55%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align text vertically */
+}
+
+.blog-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.blog-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.blog-content a {
+    color: #ff9800;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+    align-self: flex-start; /* Align button to the left */
+}
+
+.blog-content a:hover {
+    color: #e68900;
+}
+
+/* Alternate Layout: Every Second Blog Item Reverses Order */
+.blog-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .blog-image {
+        max-width: 100%;
+    }
+
+    .blog-content {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .blog-content a {
+        align-self: center; /* Center button on mobile */
+    }
+}
+
+
+/* Testimonial Section Styling */
+.testimonial-section {
+    background: url('image/Background 27.png') no-repeat center center/cover;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Dark Overlay for Readability */
+.testimonial-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 60px 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.testimonial-overlay h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Testimonial Grid - 1 Row, 4 Columns */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Individual Testimonial Box */
+.testimonial-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.testimonial-item:hover {
+    transform: scale(1.05);
+}
+
+/* Client Image */
+.testimonial-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid #ff9800;
+}
+
+/* Testimonial Text */
+.testimonial-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Client Name */
+.testimonial-item h4 {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Contact Section Styling */
+.contact-section {
+    background: url('image/Background 27.png') no-repeat center center/cover;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Overlay for Better Readability */
+.contact-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 60px 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+    color: white;
+}
+
+.contact-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.contact-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Contact Section Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Contact Info Box */
+.contact-info {
+    text-align: left;
+    max-width: 40%;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    flex: 1;
+    max-width: 55%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: white;
+    box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
+}
+
+/* Submit Button */
+.btn-submit {
+    background: #ff9800;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info {
+        max-width: 100%;
+        text-align: center;
+    }
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* Contact Section Styling */
+.contact-section {
+    background: url('image/Background 27.png') no-repeat center center/cover;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Overlay for Better Readability */
+.contact-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 60px 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+    color: white;
+}
+
+.contact-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.contact-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Contact Section Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Contact Info Box */
+.contact-info {
+    text-align: left;
+    max-width: 40%;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    flex: 1;
+    max-width: 55%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: white;
+    box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
+}
+
+/* Submit Button */
+.btn-submit {
+    background: #ff9800;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info {
+        max-width: 100%;
+        text-align: center;
+    }
+    .contact-form {
+        max-width: 100%;
+    }
+}
+

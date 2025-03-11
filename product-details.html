@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="#">MyLogo</a>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <a href="cart.html" id="cartLink" class="cart-btn">
+        <i class="fas fa-shopping-cart"></i> Cart
+    </a>
+
+    <!-- Hamburger Menu -->
+    <button class="hamburger">
+        <i class="fas fa-bars bar-icon"></i> <!-- Default -->
+        <i class="fas fa-times close-icon"></i> <!-- Hidden initially -->
+    </button>
+</header>
+
+<!-- Product Detail Section with Image Gallery -->
+<section class="product-detail-section">
+    <div class="product-container">
+        <!-- Image Gallery -->
+        <div class="product-image-gallery">
+            <div class="main-image">
+                <img src="image/Background 27.png" alt="Main Product Image" id="mainImage">
+            </div>
+            <div class="thumbnail-images">
+                <img src="image/Background 27.png" alt="Thumbnail Image 1" class="thumbnail" onclick="changeImage(this)">
+                <img src="image/Background 28.png" alt="Thumbnail Image 2" class="thumbnail" onclick="changeImage(this)">
+                <img src="image/Background 29.png" alt="Thumbnail Image 3" class="thumbnail" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <!-- Product Information -->
+        <div class="product-info">
+            <h2>Adjustable Standing Desk</h2>
+            <p class="product-price">$299.99</p>
+            <p class="product-description">Experience ultimate comfort and productivity with our adjustable standing desk. Designed for ergonomics and flexibility, it helps reduce back pain and improves posture.</p>
+            <!-- Add to Cart button -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

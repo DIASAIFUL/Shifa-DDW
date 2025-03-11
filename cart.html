@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="index.html">Standing Desks Ltd</a>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <a href="cart.html" class="cart-btn">
+        <i class="fas fa-shopping-cart"></i> Cart
+    </a>
+
+  <!-- Hamburger Menu -->
+  <button class="hamburger">
+      <i class="fas fa-bars bar-icon"></i> <!-- Default -->
+      <i class="fas fa-times close-icon"></i> <!-- Hidden initially -->
+  </button>
+</header>
+<!-- <section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Welcome to Our World</h1>
+    <p class="hero-subtitle">We provide custom software solutions to transform your business.</p>
+    <a href="#services" class="cta-btn">Get Started</a>
+  </div>
+</section> -->
+
+
+
+
+<section class="cart-section">
+    <h2>Your Shopping Cart</h2>
+    <div class="cart-container">
+        <div class="cart-item">
+            <img src="image/Background 27.png" alt="Product 1">
+            <div class="cart-details">
+                <h3>Adjustable Standing Desk</h3>
+                <p>Price: $299.99</p>
+                <p>Quantity: <input type="number" value="1" min="1"></p>
+            </div>
+            <button class="remove-btn">Remove</button>
+        </div>
+        
+        <div class="cart-item">
+            <img src="image/Background 27.png" alt="Product 2">
+            <div class="cart-details">
+                <h3>Ergonomic Chair</h3>
+                <p>Price: $199.99</p>
+                <p>Quantity: <input type="number" value="1" min="1"></p>
+            </div>
+            <button class="remove-btn">Remove</button>
+        </div>
+    </div>
+    
+    <div class="cart-summary">
+        <h3>Total: $499.98</h3>
+        <a href="checkout.html" class="cart-checkout-btn">Proceed to Checkout</a>
+    </div>
+</section>
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
