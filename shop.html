@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <a href="index.html">MyLogo</a>
+</div>
+
+
+    <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="shop.html">Products</a></li>
+          <li><a href="health-benefits.html">Health Benefits</a></li>
+          <li><a href="rising-desks.html">Rising Desks</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+    <button class="cart-btn">
+      <i class="fas fa-shopping-cart"></i> Cart
+  </button>
+
+  <!-- Hamburger Menu -->
+  <button class="hamburger">
+      <i class="fas fa-bars bar-icon"></i> <!-- Default -->
+      <i class="fas fa-times close-icon"></i> <!-- Hidden initially -->
+  </button>
+</header>
+
+<!-- hero section  -->
+ 
+<section class="health-hero">
+    <div class="health-hero-content">
+      <h1 class="health-hero-title">Shop</h1>
+    </div>
+  </section>
+
+
+
+  <!-- Product grid -->
+  <div class="Shop-header">
+    <h2> Shop Our Wellness Products </h2>
+</div>
+
+<div class="search">
+
+    <div class="search-box">
+        <input type="text" id="product-search" placeholder="Search products..." onkeyup="searchProducts()">
+        <button><i class="fas fa-search"></i></button>
+    </div>
+</div>
+
+
+
+<!-- Product Grid -->
+<div class="w3-row w3-grayscale">
+  <div class="w3-col l3 s6">
+      <div class="w3-container">
+          <a href="product-details.html">
+              <img src="image/contact-bg.png" style="width:100%">
+          </a>
+          <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+      </div>
+      <div class="w3-container">
+          <a href="product-details.html">
+              <img src="image/contact-bg.png" style="width:100%">
+          </a>
+          <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+      </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+      <div class="w3-container">
+          <div class="w3-display-container">
+              <a href="product-details.html">
+                  <img src="image/contact-bg.png" style="width:100%">
+              </a>
+              <span class="w3-tag w3-display-topleft">New</span>
+              <div class="w3-display-middle w3-display-hover">
+                  <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+              </div>
+          </div>
+          <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+      </div>
+      <div class="w3-container">
+          <a href="product-details.html">
+              <img src="image/contact-bg.png" style="width:100%">
+          </a>
+          <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+          <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+      </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+      <div class="w3-container">
+          <a href="product-details.html">
+              <img src="image/contact-bg.png" style="width:100%">
+          </a>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+        </div>
+        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
+    </div>
+</div>
+
+
+<p id="no-results" style="display: none; text-align: center; font-size: 16px; color: red; margin-top: 10px;">
+    No search results found.
+</p>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+   

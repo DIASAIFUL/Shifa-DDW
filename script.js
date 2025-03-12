@@ -77,3 +77,38 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
 //   }
 // });
+
+
+
+// Product Search Function
+
+
+function searchProducts() {
+  let input = document.getElementById("product-search").value.toLowerCase();
+  let products = document.querySelectorAll(".w3-container p");
+  let noResultsMessage = document.getElementById("no-results"); 
+  let hasResults = false;
+
+  products.forEach((product) => {
+      let productName = product.innerText.toLowerCase();
+      let parentContainer = product.closest(".w3-container");
+
+      if (productName.includes(input)) {
+          parentContainer.style.display = "block";
+          hasResults = true;
+      } else {
+          parentContainer.style.display = "none";
+      }
+  });
+
+  // Show "No results found" message if no products match the search
+  if (!hasResults) {
+      noResultsMessage.style.display = "block";
+  } else {
+      noResultsMessage.style.display = "none";
+  }
+}
+
+
+
+
