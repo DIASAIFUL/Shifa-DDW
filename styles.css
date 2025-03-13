@@ -201,7 +201,7 @@ body {
 /* Full-screen hero section */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 70vh;
   background-image: url("image/colors-backgrounds-cover.png"); /* Replace with your image */
   background-size: cover;
   background-position: center;
@@ -1502,15 +1502,17 @@ button.cta-btn:hover {
 /* Wellness Services Section */
 .wellness-services {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 80px;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px;
   background: #f9f9f9;
   max-width: 100%;
   margin: auto;
 }
 
+/* Image Section */
 .wellness-image {
   flex: 1;
   max-width: 50%;
@@ -1521,9 +1523,11 @@ button.cta-btn:hover {
   width: 100%;
   border-radius: 10px;
   display: block;
-  height: 440px;
+  height: 400px;
+  object-fit: cover;
 }
 
+/* Content Section */
 .wellness-content {
   flex: 1;
   max-width: 50%;
@@ -1544,6 +1548,7 @@ button.cta-btn:hover {
 .wellness-content ul {
   list-style: none;
   padding: 0;
+  padding-bottom: 20px;
 }
 
 .wellness-content ul li {
@@ -1560,6 +1565,7 @@ button.cta-btn:hover {
   margin-right: 10px;
 }
 
+/* Button */
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -1572,6 +1578,51 @@ button.cta-btn:hover {
 
 .btn:hover {
   background: #e68900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wellness-services {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .wellness-image {
+    max-width: 80%;
+  }
+
+  .wellness-image img {
+    height: 300px;
+  }
+
+  .wellness-content {
+    max-width: 90%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .wellness-services {
+    padding: 20px;
+  }
+
+  .wellness-image {
+    max-width: 100%;
+  }
+
+  .wellness-image img {
+    height: 250px;
+  }
+
+  .wellness-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .wellness-content p,
+  .wellness-content ul li {
+    font-size: 1rem;
+  }
 }
 
 /* Testimonial Section Styling */
@@ -1692,58 +1743,139 @@ button.cta-btn:hover {
   max-width: 800px;
   padding: 20px;
 }
-
+/* Hero Title */
 .health-hero-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0;
+  color: #333; /* Darker shade for better readability */
+  text-align: center;
 }
 
+/* Benefit Sections */
 .benefit {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px;
-  background-color: white;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 60px;
+  background-color: #f9f9f9; /* Slightly softer background */
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Ensures it doesn't get too wide */
+  transition: transform 0.3s ease-in-out;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
 }
 
 .benefit img {
   width: 50%;
-  border-radius: 10px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.benefit img:hover {
+  opacity: 0.9;
 }
 
 .benefit .text {
   width: 45%;
   text-align: left;
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
+.benefit h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.benefit p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.benefit a.cta-btn {
+  display: inline-block;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.benefit a.cta-btn:hover {
+  background-color: #e65c00;
+}
+
+/* Reverse Layout */
 .reverse {
   flex-direction: row-reverse;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .health-hero {
-    height: 40vh; /* Reduce height on smaller screens */
-    padding: 10px;
+@media (max-width: 992px) {
+  .benefit {
+    padding: 40px;
   }
 
-  .health-hero-title {
-    font-size: 2rem; /* Adjust font size for mobile */
+  .benefit .text {
+    width: 50%;
   }
+
+  .benefit img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .health-hero-title {
+    font-size: 2.5rem;
+  }
+
   .benefit {
     flex-direction: column;
     text-align: center;
+    padding: 30px;
   }
 
   .benefit img,
   .benefit .text {
     width: 100%;
+  }
+
+  .benefit .text {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .health-hero-title {
+    font-size: 2rem;
+  }
+
+  .benefit {
+    padding: 20px;
+  }
+
+  .benefit .text {
+    font-size: 1rem;
+  }
+
+  .benefit a.cta-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
   }
 }
 
@@ -1793,4 +1925,160 @@ button.cta-btn:hover {
   .search-box input {
     font-size: 12px;
   }
+}
+
+/* Special Offer Slideshow */
+.special-offer-slider {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Set a fixed height */
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff6600, #ff3300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slides-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.offer-content {
+  color: white;
+  text-align: center;
+  width: 80%;
+}
+
+.offer-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.offer-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: white;
+  color: #ff3300;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* Navigation Dots */
+.dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background-color: #ffcc00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .special-offer-slider {
+    height: 250px;
+  }
+
+  .offer-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .offer-content p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* new ================================ */
+
+/* Modal Background Overlay */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  margin: 15% auto; /* Centered */
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button Style */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #333;
 }

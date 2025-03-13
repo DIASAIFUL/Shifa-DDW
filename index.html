@@ -24,6 +24,11 @@
       </ul>
     </nav>
 
+    <!-- Search Bar -->
+    <!-- <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchFunction()"><i class="fas fa-search"></i></button>
+    </div> -->
 
     <a href="cart.html" class="cart-btn">
       <i class="fas fa-shopping-cart"></i> Cart
@@ -48,117 +53,90 @@
 </section>
 
 
+<!-- <div id="helloModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Welcome to Standing Desk Company!</h2>
+    <p>We're excited to help you improve your health and productivity with our top-quality standing desks. Explore our range of products and find the perfect desk for your workspace!</p>
+    <a href="index.html" class="btn">Explore Our Desks</a>
+  </div>
+</div> -->
+
+  <!-- Modal HTML -->
+  <div id="helloModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Hello, welcome to Standing Desk Company!</p>
+      <button class="btn" id="okButton">Okay</button>
+    </div>
+  </div>
+
+
+
 
 
 <section class="wellness-services">
   <div class="wellness-image">
-      <img src="image/Background 27.png" alt="Wellness Service">
+      <img src="image/Background 27.png" alt="Standing Desk Wellness">
   </div>
   <div class="wellness-content">
-      <h2>Our Wellness Services</h2>
-      <p>We provide top-quality wellness services to help you achieve a balanced and healthy lifestyle. From relaxation to fitness and nutrition, we have the perfect solutions for you.</p>
+      <h2>Boost Your Wellness with Standing Desks</h2>
+      <p>Our standing desks are designed to improve your health and productivity. Whether you're working from home or the office, standing desks help you maintain better posture, reduce back pain, and increase energy levels throughout the day.</p>
       <ul>
-          <li>🌿 Holistic Therapy</li>
-          <li>🧘 Yoga & Meditation</li>
-          <li>🥗 Nutrition Coaching</li>
-          <li>💆 Massage & Relaxation</li>
+          <li>Ergonomic Desk Solutions</li>
+          <li>Active Workstations</li>
+          <li>Posture Improvement</li>
+          <li>Enhanced Focus & Energy</li>
       </ul>
-      <a href="services.html" class="btn">Learn More</a>
+      <a href="rising-desks.html" class="btn">Discover Our Desks</a>
   </div>
 </section>
 
 
 
-<!-- Special Offers Section -->
-<section id="special-offers">
-  <div class="offers-header">
-      <h2>🔥 Special Offers 🔥</h2>
-      <p>Upgrade your health & productivity with our exclusive deals!</p>
+
+
+<!-- Special Offer Slideshow -->
+<section class="special-offer-slider">
+  <div class="slides-container">
+    <div class="slide active">
+      <div class="offer-content">
+        <h2>Limited Time Offer!</h2>
+        <p>Upgrade your workspace today and enjoy <strong>25% OFF</strong> on all standing desks!</p>
+        <p>Hurry, this deal ends soon!</p>
+        <a href="your-product-page.html" class="cta-btn">Shop Now</a>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="offer-content">
+        <h2>Spring Sale</h2>
+        <p>Work Better – Buy 1 Desk, Get an Ergonomic Chair <strong>50% OFF</strong></p>
+        <p>Don't miss out on this deal!</p>
+        <a href="your-product-page.html" class="cta-btn">Claim Offer</a>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="offer-content">
+        <h2>Exclusive Deal</h2>
+        <p>Buy 2 Standing Desks & Get <strong>1 Chair FREE</strong>!</p>
+        <p>Limited Stock Available!</p>
+        <a href="your-product-page.html" class="cta-btn">Get This Deal</a>
+      </div>
+    </div>
   </div>
-  <div class="offers-grid">
-      <div class="offer-item">
-          <img src="image/contact-bg.png" alt="Offer 1">
-          <div class="offer-overlay">
-              <h3>20% Off Adjustable Desks</h3>
-              <p>Improve your posture & stay active while working.</p>
-              <button class="offer-btn">Shop Now</button>
-          </div>
-      </div>
-      <div class="offer-item">
-          <img src="image/contact-bg.png" alt="Offer 2">
-          <div class="offer-overlay">
-              <h3>Buy 1 Get 1 Free</h3>
-              <p>Double the benefits at half the cost.</p>
-              <button class="offer-btn">Shop Now</button>
-          </div>
-      </div>
-      <div class="offer-item">
-          <img src="image/contact-bg.png" alt="Offer 3">
-          <div class="offer-overlay">
-              <h3>Special Clearance Sale</h3>
-              <p>Massive discounts on ergonomic workspace essentials.</p>
-              <button class="offer-btn">Shop Now</button>
-          </div>
-      </div>
+
+  <!-- Navigation Dots -->
+  <div class="dots">
+    <span class="dot active" onclick="setSlide(0)"></span>
+    <span class="dot" onclick="setSlide(1)"></span>
+    <span class="dot" onclick="setSlide(2)"></span>
   </div>
 </section>
 
- <!-- Health Benefits Section -->
- <section id="health-benefits">
-  <div class="benefits-header">
-      <h2>🌿 Health Benefits of Standing Desks 🌿</h2>
-  </div>
-  <div class="benefits-container">
-      <div class="benefit-box">
-          <img src="image/Background 27.png" alt="Better Posture">
-          <h3>Better Posture</h3>
-          <p>Maintain a healthy spinal alignment and reduce strain on your back.</p>
-      </div>
-      <div class="benefit-box">
-          <img src="image/Background 27.png" alt="Reduced Back Pain">
-          <h3>Reduced Back Pain</h3>
-          <p>Standing desks help alleviate lower back pain caused by prolonged sitting.</p>
-      </div>
-      <div class="benefit-box">
-          <img src="image/Background 27.png" alt="Increased Productivity">
-          <h3>Increased Productivity</h3>
-          <p>Boost energy levels and stay focused throughout the day.</p>
-      </div>
-  </div>
-</section>
-
-<!-- 
-<section class="special-offers">
-  <h2>Special Offers</h2>
-  <div class="offer-grid">
-      <div class="offer-item">
-          <img src="image/contact-bg.png" alt="Offer 1">
-          <div class="offer-details">
-              <h3>20% Off Adjustable Desks</h3>
-              <p>Upgrade your workspace with our premium adjustable standing desks.</p>
-          </div>
-      </div>
-      <div class="offer-item">
-          <img src="image/contact-bg.png" alt="Offer 2">
-          <div class="offer-details">
-              <h3>Buy 1 Get 1 Free</h3>
-              <p>Exclusive deal on select standing desk models. Don't miss out!</p>
-          </div>
-      </div>
-      <div class="offer-item">
-          <img src="image/contact-bg.png" alt="Offer 3">
-          <div class="offer-details">
-              <h3>Limited-Time Discount</h3>
-              <p>Save big on ergonomic workspace solutions. Hurry, offer ends soon!</p>
-          </div>
-      </div>
-  </div>
-</section>
- -->
 
 
- <!-- Special Offers Section -->
- 
   <!-- Product grid -->
   <div class="Shop-header">
     <h2> Shop Our Wellness Products </h2>
@@ -254,6 +232,101 @@
       </div>
     </div>
   </div>
+
+
+
+
+<!-- Special Offers Section -->
+<section id="special-offers">
+  <div class="offers-header">
+      <h2>🔥 Special Offers 🔥</h2>
+      <p>Upgrade your health & productivity with our exclusive deals!</p>
+  </div>
+  <div class="offers-grid">
+      <div class="offer-item">
+          <img src="image/contact-bg.png" alt="Offer 1">
+          <div class="offer-overlay">
+              <h3>20% Off Adjustable Desks</h3>
+              <p>Improve your posture & stay active while working.</p>
+              <button class="offer-btn">Shop Now</button>
+          </div>
+      </div>
+      <div class="offer-item">
+          <img src="image/contact-bg.png" alt="Offer 2">
+          <div class="offer-overlay">
+              <h3>Buy 1 Get 1 Free</h3>
+              <p>Double the benefits at half the cost.</p>
+              <button class="offer-btn">Shop Now</button>
+          </div>
+      </div>
+      <div class="offer-item">
+          <img src="image/contact-bg.png" alt="Offer 3">
+          <div class="offer-overlay">
+              <h3>Special Clearance Sale</h3>
+              <p>Massive discounts on ergonomic workspace essentials.</p>
+              <button class="offer-btn">Shop Now</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+ <!-- Health Benefits Section -->
+ <section id="health-benefits">
+  <div class="benefits-header">
+      <h2>🌿 Health Benefits of Standing Desks 🌿</h2>
+  </div>
+  <div class="benefits-container">
+      <div class="benefit-box">
+          <img src="image/Background 27.png" alt="Better Posture">
+          <h3>Better Posture</h3>
+          <p>Maintain a healthy spinal alignment and reduce strain on your back.</p>
+      </div>
+      <div class="benefit-box">
+          <img src="image/Background 27.png" alt="Reduced Back Pain">
+          <h3>Reduced Back Pain</h3>
+          <p>Standing desks help alleviate lower back pain caused by prolonged sitting.</p>
+      </div>
+      <div class="benefit-box">
+          <img src="image/Background 27.png" alt="Increased Productivity">
+          <h3>Increased Productivity</h3>
+          <p>Boost energy levels and stay focused throughout the day.</p>
+      </div>
+  </div>
+</section>
+
+<!-- 
+<section class="special-offers">
+  <h2>Special Offers</h2>
+  <div class="offer-grid">
+      <div class="offer-item">
+          <img src="image/contact-bg.png" alt="Offer 1">
+          <div class="offer-details">
+              <h3>20% Off Adjustable Desks</h3>
+              <p>Upgrade your workspace with our premium adjustable standing desks.</p>
+          </div>
+      </div>
+      <div class="offer-item">
+          <img src="image/contact-bg.png" alt="Offer 2">
+          <div class="offer-details">
+              <h3>Buy 1 Get 1 Free</h3>
+              <p>Exclusive deal on select standing desk models. Don't miss out!</p>
+          </div>
+      </div>
+      <div class="offer-item">
+          <img src="image/contact-bg.png" alt="Offer 3">
+          <div class="offer-details">
+              <h3>Limited-Time Discount</h3>
+              <p>Save big on ergonomic workspace solutions. Hurry, offer ends soon!</p>
+          </div>
+      </div>
+  </div>
+</section>
+ -->
+
+
+ <!-- Special Offers Section -->
+ 
+
 
 
   <section class="testimonial-section">

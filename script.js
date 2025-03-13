@@ -112,3 +112,84 @@ function searchProducts() {
 
 
 
+
+
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    dots[i].classList.remove("active");
+  });
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+  currentIndex = index;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
+
+// Auto-slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+// Manual control with dots
+function setSlide(index) {
+  showSlide(index);
+}
+
+// Show first slide
+showSlide(currentIndex);
+
+// slide show end 
+
+
+
+// var modal = document.getElementById("helloModal");
+// var closeBtn = document.getElementsByClassName("close")[0];
+
+// // Show modal on page load
+// window.onload = function() {
+//   modal.style.display = "block";
+//   setTimeout(function() {
+//     modal.querySelector(".modal-content").style.opacity = "1";
+//     modal.querySelector(".modal-content").style.transform = "translateY(0)";
+//   }, 100);
+// };
+
+// // Close modal when the user clicks on the "x" button
+// closeBtn.onclick = function() {
+//   modal.style.display = "none";
+// };
+
+// Get the modal, close button, and "Okay" button
+var modal = document.getElementById("helloModal");
+var closeBtn = document.getElementsByClassName("close")[0];
+var okButton = document.getElementById("okButton");
+
+// Show the modal when the page loads
+window.onload = function() {
+  modal.style.display = "block";
+};
+
+// Close the modal when the user clicks on the "×" button
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+};
+
+// Close the modal when the user clicks the "Okay" button
+okButton.onclick = function() {
+  modal.style.display = "none";
+};
+
+// Close the modal if the user clicks anywhere outside the modal content
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
