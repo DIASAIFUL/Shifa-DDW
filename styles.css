@@ -1686,14 +1686,15 @@ button.cta-btn:hover {
 /* Testimonial Section Styling */
 .testimonial-section {
   /* background: url("image/Background 27.png") no-repeat center center/cover; */
-  background-color: #eeeee;
+  /* background-color: #eeeee; */
   padding: 100px 20px;
   text-align: center;
+  box-shadow: none !importent;
 }
 
 /* Dark Overlay for Readability */
 .testimonial-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(157, 0, 231, 1);
   padding: 60px 20px;
   border-radius: 10px;
   max-width: 1200px;
