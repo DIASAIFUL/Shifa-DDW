@@ -1,18 +1,19 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Responsive Navigation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Responsive Navigation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-<header class="header">
+  <header class="header">
     <div class="logo">
-        <a href="index.html"> Standing Desks Ltd</a>
+      <a href="index.html"> Standing Desks Ltd</a>
     </div>
 
     <nav class="nav">
@@ -20,6 +21,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="rising-desks.html" class="active">Rising Desks</a></li>
         <li><a href="health-benefits.html">Health Benefits</a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
@@ -32,37 +34,18 @@
 
     <a href="cart.html" class="cart-btn">
       <i class="fas fa-shopping-cart"></i> Cart
-  </a>
+    </a>
 
 
-  <!-- Hamburger Menu -->
-  <button class="hamburger">
+    <!-- Hamburger Menu -->
+    <button class="hamburger">
       <i class="fas fa-bars bar-icon"></i> <!-- Default -->
       <i class="fas fa-times close-icon"></i> <!-- Hidden initially -->
-  </button>
-</header>
-
-<!-- header end  -->
-
-<section class="hero">
-  <div class="hero-content">
-    <h1 class="hero-title">Welcome to Our World</h1>
-    <p class="hero-subtitle">We provide custom software solutions to transform your business.</p>
-    <a href="#services" class="cta-btn">Get Started</a>
-  </div>
-</section>
+    </button>
+  </header>
 
 
-<!-- <div id="helloModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Welcome to Standing Desk Company!</h2>
-    <p>We're excited to help you improve your health and productivity with our top-quality standing desks. Explore our range of products and find the perfect desk for your workspace!</p>
-    <a href="index.html" class="btn">Explore Our Desks</a>
-  </div>
-</div> -->
-
-  <!-- Modal HTML -->
+  <!--  Pop Up Modal HTML -->
   <div id="helloModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -73,171 +56,210 @@
 
 
 
+  <!-- header end  -->
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to Our World</h1>
+      <p class="hero-subtitle">We provide custom software solutions to transform your business.</p>
+      <a href="#multimedia" class="cta-btn">Get Started</a>
+    </div>
+  </section>
 
 
-<section class="wellness-services">
-  <div class="wellness-image">
-      <img src="image/Background 27.png" alt="Standing Desk Wellness">
+  <!-- <div id="helloModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Welcome to Standing Desk Company!</h2>
+    <p>We're excited to help you improve your health and productivity with our top-quality standing desks. Explore our range of products and find the perfect desk for your workspace!</p>
+    <a href="index.html" class="btn">Explore Our Desks</a>
   </div>
-  <div class="wellness-content">
+</div> -->
+
+
+  <!-- Section with Multimedia Element (Video) -->
+  <section id="multimedia" class="benefit">
+    <div class="text">
+      <h2>See Our Standing Desks in Action</h2>
+      <p>Watch this short video to learn how our adjustable standing desks can improve your health and productivity.</p>
+    </div>
+    <div class="video-wrapper">
+      <video autoplay muted loop>
+        <source src="Videos/video1.mp4" type="video/mp4">
+
+      </video>
+    </div>
+  </section>
+
+
+
+  <section class="wellness-services">
+    <div class="wellness-image">
+      <img src="image/5.jpg" alt="Standing Desk Wellness">
+    </div>
+    <div class="wellness-content">
       <h2>Boost Your Wellness with Standing Desks</h2>
-      <p>Our standing desks are designed to improve your health and productivity. Whether you're working from home or the office, standing desks help you maintain better posture, reduce back pain, and increase energy levels throughout the day.</p>
+      <p>Our standing desks are designed to improve your health and productivity. Whether you're working from home or
+        the office, standing desks help you maintain better posture, reduce back pain, and increase energy levels
+        throughout the day.</p>
       <ul>
-          <li>Ergonomic Desk Solutions</li>
-          <li>Active Workstations</li>
-          <li>Posture Improvement</li>
-          <li>Enhanced Focus & Energy</li>
+        <li>Ergonomic Desk Solutions</li>
+        <li>Active Workstations</li>
+        <li>Posture Improvement</li>
+        <li>Enhanced Focus & Energy</li>
       </ul>
       <a href="rising-desks.html" class="btn">Discover Our Desks</a>
-  </div>
-</section>
+    </div>
+  </section>
 
 
 
 
 
-<!-- Special Offer Slideshow -->
-<section class="special-offer-slider">
-  <div class="slides-container">
-    <div class="slide active">
-      <div class="offer-content">
-        <h2>Limited Time Offer!</h2>
-        <p>Upgrade your workspace today and enjoy <strong>25% OFF</strong> on all standing desks!</p>
-        <p>Hurry, this deal ends soon!</p>
-        <a href="your-product-page.html" class="cta-btn">Shop Now</a>
+  <!-- Special Offer Slideshow -->
+  <section class="special-offer-slider" id="special-offers">
+    <div class="slides-container">
+      <div class="slide active">
+        <div class="offer-content">
+          <h2>Limited Time Offer!</h2>
+          <p>Upgrade your workspace today and enjoy <strong>25% OFF</strong> on all standing desks!</p>
+          <p>Hurry, this deal ends soon!</p>
+          <a href="shop.html" class="cta-btn">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="offer-content">
+          <h2>Spring Sale</h2>
+          <p>Work Better – Buy 1 Desk, Get an Ergonomic Chair <strong>50% OFF</strong></p>
+          <p>Don't miss out on this deal!</p>
+          <a href="shop.html" class="cta-btn">Claim Offer</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="offer-content">
+          <h2>Exclusive Deal</h2>
+          <p>Buy 2 Standing Desks & Get <strong>1 Chair FREE</strong>!</p>
+          <p>Limited Stock Available!</p>
+          <a href="S" class="cta-btn">Get This Deal</a>
+        </div>
       </div>
     </div>
 
-    <div class="slide">
-      <div class="offer-content">
-        <h2>Spring Sale</h2>
-        <p>Work Better – Buy 1 Desk, Get an Ergonomic Chair <strong>50% OFF</strong></p>
-        <p>Don't miss out on this deal!</p>
-        <a href="your-product-page.html" class="cta-btn">Claim Offer</a>
-      </div>
+    <!-- Navigation Dots -->
+    <div class="dots">
+      <span class="dot active" onclick="setSlide(0)"></span>
+      <span class="dot" onclick="setSlide(1)"></span>
+      <span class="dot" onclick="setSlide(2)"></span>
     </div>
-
-    <div class="slide">
-      <div class="offer-content">
-        <h2>Exclusive Deal</h2>
-        <p>Buy 2 Standing Desks & Get <strong>1 Chair FREE</strong>!</p>
-        <p>Limited Stock Available!</p>
-        <a href="your-product-page.html" class="cta-btn">Get This Deal</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Navigation Dots -->
-  <div class="dots">
-    <span class="dot active" onclick="setSlide(0)"></span>
-    <span class="dot" onclick="setSlide(1)"></span>
-    <span class="dot" onclick="setSlide(2)"></span>
-  </div>
-</section>
+  </section>
 
 
+  
 
-  <!-- Product grid -->
-  <div class="Shop-header">
-    <h2> Shop Our Wellness Products </h2>
+
+<!-- Product grid -->
+<div class="Shop-header">
+  <h2> Shop Our Wellness Products </h2>
 </div>
-  <div class="w3-row w3-grayscale">
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <a href="product-details.html">
-          <img src="image/contact-bg.png" style="width:100%">
-        </a>
-        <div class="w3-display-middle w3-display-hover">
-          <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-        </div>
-        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
+<div class="w3-row w3-grayscale">
+  <div class="w3-col l3 s6">
+    <div class="w3-container">
+      <a href="product-details.html">
+        <img src="image/wood1.jpg" style="width:100%">
+      </a>
+      <div class="w3-display-middle w3-display-hover">
+        <button class="w3-button w3-black">Add To cart <i class="fa fa-shopping-cart"></i></button>
       </div>
-      <div class="w3-container">
-        <a href="product-details.html">
-          <img src="image/contact-bg.png" style="width:100%">
-        </a>
-        <div class="w3-display-middle w3-display-hover">
-          <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-        </div>
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
-      </div>
+      <p>ErgoRise Desk<br><b>$349.99</b></p> 
     </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <a href="product-details.html">
-            <img src="image/contact-bg.png" style="width:100%">
-          </a>
-          <span class="w3-tag w3-display-topleft">New</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
-        </div>
-        <p>Mega Ripped Jeans<br><b>$19.99</b></p>
+    <div class="w3-container">
+      <a href="product-details.html">
+        <img src="image/wood2.jpg" style="width:100%">
+      </a>
+      <div class="w3-display-middle w3-display-hover">
+        <button class="w3-button w3-black">Add To cart <i class="fa fa-shopping-cart"></i></button>
       </div>
-      <div class="w3-container">
-        <a href="product-details.html">
-          <img src="image/contact-bg.png" style="width:100%">
-        </a>
-        <div class="w3-display-middle w3-display-hover">
-        <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-        </div>
-        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <a href="product-details.html">
-          <img src="image/contact-bg.png" style="width:100%">
-        </a>
-        <div class="w3-display-middle w3-display-hover">
-          <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-        </div>
-        <p>Washed Skinny Jeans<br><b>$20.50</b></p>
-      </div>
-      <div class="w3-container">
-        <div class="w3-display-container">
-          <a href="product-details.html">
-            <img src="image/contact-bg.png" style="width:100%">
-          </a>
-          <span class="w3-tag w3-display-topleft">Sale</span>
-          <div class="w3-display-middle w3-display-hover">
-            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-          </div>
-        </div>
-        <p>Vintage Skinny Jeans<br><b class="w3-text-red">$14.99</b></p>
-      </div>
-    </div>
-
-    <div class="w3-col l3 s6">
-      <div class="w3-container">
-        <a href="product-details.html">
-          <img src="image/contact-bg.png" style="width:100%">
-        </a>
-        <div class="w3-display-middle w3-display-hover">
-          <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-        </div>
-        <p>Vintage Skinny Jeans<br><b>$14.99</b></p>
-      </div>
-      <div class="w3-container">
-        <a href="product-details.html">
-          <img src="image/contact-bg.png" style="width:100%">
-        </a>
-        <div class="w3-display-middle w3-display-hover">
-          <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
-        </div>
-        <p>Ripped Skinny Jeans<br><b>$24.99</b></p>
-      </div>
+      <p>StandUp Pro Desk<br><b>$299.99</b></p> 
     </div>
   </div>
 
+  <div class="w3-col l3 s6">
+    <div class="w3-container">
+      <div class="w3-display-container">
+        <a href="product-details.html">
+          <img src="image/1.jpg" style="width:100%">
+        </a>
+        <span class="w3-tag w3-display-topleft">New</span>
+        <div class="w3-display-middle w3-display-hover">
+          <button class="w3-button w3-black">Add To cart <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      <p>FlexiDesk Pro<br><b>$269.99</b></p> 
+    </div>
+    <div class="w3-container">
+      <a href="product-details.html">
+        <img src="image/7.jpg" style="width:100%">
+      </a>
+      <div class="w3-display-middle w3-display-hover">
+        <button class="w3-button w3-black">Add To cart <i class="fa fa-shopping-cart"></i></button>
+      </div>
+      <p>PostureMax Standing Desk<br><b>$279.99</b></p> 
+    </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container">
+      <a href="product-details.html">
+        <img src="image/8.jpg" style="width:100%">
+      </a>
+      <div class="w3-display-middle w3-display-hover">
+        <button class="w3-button w3-black">Add To cart <i class="fa fa-shopping-cart"></i></button>
+      </div>
+      <p>CoreBalance Standing Desk<br><b>$249.99</b></p> 
+    </div>
+    <div class="w3-container">
+      <div class="w3-display-container">
+        <a href="product-details.html">
+          <img src="image/9.jpg" style="width:100%">
+        </a>
+        <span class="w3-tag w3-display-topleft">Sale</span>
+        <div class="w3-display-middle w3-display-hover">
+          <button class="w3-button w3-black">Add To cart <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      <p>RiseFlex Adjustable Desk<br><b class="w3-text-red">$199.99</b></p>
+    </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container">
+      <a href="product-details.html">
+        <img src="image/10.jpg" style="width:100%">
+      </a>
+      <div class="w3-display-middle w3-display-hover">
+        <button class="w3-button w3-black">Add To cart <i class="fa fa-shopping-cart"></i></button>
+      </div>
+      <p>StandSmart Pro Desk<br><b>$329.99</b></p> 
+    </div>
+    <div class="w3-container">
+      <a href="product-details.html">
+        <img src="image/21.jpg" style="width:100%">
+      </a>
+      <div class="w3-display-middle w3-display-hover">
+        <button class="w3-button w3-black">Add To cart <i class="fa fa-shopping-cart"></i></button>
+      </div>
+      <p>VitalStand Desk<br><b>$319.99</b></p> 
+    </div>
+  </div>
+</div>
 
 
 
-<!-- Special Offers Section -->
-<section id="special-offers">
+
+  <!-- Special Offers Section -->
+  <!-- <section id="special-offers">
   <div class="offers-header">
       <h2>🔥 Special Offers 🔥</h2>
       <p>Upgrade your health & productivity with our exclusive deals!</p>
@@ -268,33 +290,55 @@
           </div>
       </div>
   </div>
-</section>
+</section> -->
 
- <!-- Health Benefits Section -->
- <section id="health-benefits">
-  <div class="benefits-header">
-      <h2>🌿 Health Benefits of Standing Desks 🌿</h2>
-  </div>
-  <div class="benefits-container">
+  <!-- Health Benefits Section -->
+  <section id="health-benefits">
+    <div class="benefits-header">
+      <h2> Health Benefits of Standing Desks </h2>
+    </div>
+    <div class="benefits-container">
       <div class="benefit-box">
-          <img src="image/Background 27.png" alt="Better Posture">
-          <h3>Better Posture</h3>
-          <p>Maintain a healthy spinal alignment and reduce strain on your back.</p>
-      </div>
-      <div class="benefit-box">
-          <img src="image/Background 27.png" alt="Reduced Back Pain">
-          <h3>Reduced Back Pain</h3>
-          <p>Standing desks help alleviate lower back pain caused by prolonged sitting.</p>
-      </div>
-      <div class="benefit-box">
-          <img src="image/Background 27.png" alt="Increased Productivity">
-          <h3>Increased Productivity</h3>
-          <p>Boost energy levels and stay focused throughout the day.</p>
-      </div>
-  </div>
-</section>
+        <img src="image\posture-workplace-better-infoG.jpg" alt="Better Posture">
+        <h3>Better Posture</h3>
+        <p>Standing desks promote better spinal alignment and reduce strain on your back. By regularly switching between
+          sitting and standing, you can alleviate tension in your neck, shoulders, and lower back, improving posture
+          over time.</p>
+        <br>
+        <!-- <p>Whether you're working from home or in the office, maintaining an upright position can enhance your energy
+          levels and focus, while lowering the risk of long-term health issues like chronic back pain.</p> -->
 
-<!-- 
+          <a href="anotherpage.html" class="read-more-btn">Read More</a>
+      </div>
+      <div class="benefit-box">
+        <img src="image/th.jpg" alt="Reduced Back Pain">
+        <h3>Reduced Back Pain</h3>
+        <p>Standing desks are an effective way to combat the discomfort and pain caused by prolonged sitting. Sitting
+          for long periods puts unnecessary strain on the spine, leading to muscle stiffness and lower back pain.</p>
+        <br>
+        <!-- <p>By alternating between sitting and standing, you can relieve pressure on your lower back, improve blood
+          circulation, and reduce the risk of chronic pain. Many users report significant improvements in their back
+          health after switching to a standing desk setup.</p> -->
+
+          <a href="anotherpage.html" class="read-more-btn">Read More</a>
+      </div>
+      <div class="benefit-box">
+        <img src="image/increased-productivity.jpg" alt="Increased Productivity">
+        <h3>Increased Productivity</h3>
+        <p class="short-description">Boost energy levels and stay focused throughout the day.</p>
+        <p class="short-description">Standing desks help maintain a high level of energy throughout the workday by encouraging movement and
+          reducing the fatigue that comes with sitting for long hours.</p>
+        <!-- <p class="full-description" style="display: none;">
+          Standing desks help maintain a high level of energy throughout the workday by encouraging movement and
+          reducing the fatigue that comes with sitting for long hours. Switching between sitting and standing helps keep
+          blood circulating and prevents the stiffness and sluggishness that often occur from prolonged sitting. -->
+
+          <a href="anotherpage.html" class="read-more-btn">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
 <section class="special-offers">
   <h2>Special Offers</h2>
   <div class="offer-grid">
@@ -324,69 +368,68 @@
  -->
 
 
- <!-- Special Offers Section -->
- 
+  <!-- Special Offers Section -->
+
 
 
 
   <section class="testimonial-section">
     <div class="testimonial-overlay">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-item">
-                <img src="image/Background 27.png" alt="Client 1">
-                <p>"Standing Desks Ltd has completely transformed my work life. No more back pain, and I feel more productive!"</p>
-                <h4>- Sarah Johnson</h4>
-            </div>
-            <div class="testimonial-item">
-                <img src="image/Background 27.png" alt="Client 2">
-                <p>"The quality and design of these standing desks are unmatched. Absolutely love my purchase!"</p>
-                <h4>- Mark Thompson</h4>
-            </div>
-            <div class="testimonial-item">
-                <img src="image/Background 27.png" alt="Client 3">
-                <p>"Fast delivery, easy setup, and great customer service. Highly recommend!"</p>
-                <h4>- Emily Williams</h4>
-            </div>
-            <div class="testimonial-item">
-                <img src="image/Background 27.png" alt="Client 4">
-                <p>"I feel more energetic and focused since switching to a standing desk. Amazing product!"</p>
-                <h4>- James Brown</h4>
-            </div>
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-item">
+          <img src="image/client2.jpg" alt="Client 1">
+          <p>"Standing Desks Ltd has completely transformed my work life. No more back pain, and I feel more
+            productive!"</p>
+          <h4>- Sarah Johnson</h4>
         </div>
+        <div class="testimonial-item">
+          <img src="image/client1.jpg" alt="Client 2">
+          <p>"The quality and design of these standing desks are unmatched. Absolutely love my purchase!"</p>
+          <h4>- Mark Thompson</h4>
+        </div>
+        <div class="testimonial-item">
+          <img src="image/client3.jpg" alt="Client 3">
+          <p>"Fast delivery, easy setup, and great customer service. Highly recommend!"</p>
+          <h4>- Emily Williams</h4>
+        </div>
+        <div class="testimonial-item">
+          <img src="image/client4.jpg" alt="Client 4">
+          <p>"I feel more energetic and focused since switching to a standing desk. Amazing product!"</p>
+          <h4>- James Brown</h4>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
 
 
   <section id="contact-area">
     <div class="contact-wrapper">
-        <h2>Get in Touch</h2>
-        <p>We’d love to hear from you! Fill out the form below and we’ll get back to you as soon as possible.</p>
-        <div class="contact-content">
-            <div class="contact-details">
-                <h3>Contact Details</h3>
-                <p><strong>📍 Address:</strong> 1234 Standing Desk Street, NY</p>
-                <p><strong>📧 Email:</strong> support@standingdesks.com</p>
-                <p><strong>📞 Phone:</strong> +1 234 567 890</p>
-            </div>
-            <div class="contact-box">
-                <form action="#" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
+      <h2>Get in Touch</h2>
+      <p>We’d love to hear from you! Fill out the form below and we’ll get back to you as soon as possible.</p>
+      <div class="contact-content">
+        <div class="contact-details">
+          <h3>Contact Details</h3>
+          <p><strong>📍 Address:</strong> 1234 Standing Desk Street, NY</p>
+          <p><strong>📧 Email:</strong> support@standingdesks.com</p>
+          <p><strong>📞 Phone:</strong> +1 234 567 890</p>
         </div>
+        <div class="contact-box">
+          <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
 
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-</html>
 
-  
-  
+</html>

@@ -131,6 +131,9 @@ body {
   background-color: #e63928;
 }
 
+a.cart-btn {
+  text-decoration-line: none;
+}
 .hamburger {
   display: none; /* Hidden on larger screens */
   font-size: 28px;
@@ -202,7 +205,7 @@ body {
 .hero {
   position: relative;
   height: 70vh;
-  background-image: url("image/colors-backgrounds-cover.png"); /* Replace with your image */
+  background-image: url("image/3.jpg"); /* Replace with your image */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -212,6 +215,27 @@ body {
   text-align: center;
   overflow: hidden;
   transition: background 0.5s ease;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Initial overlay color */
+  z-index: 1;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.hero:hover::before {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
@@ -233,7 +257,7 @@ body {
   animation: fadeInSubtitle 3s forwards;
 }
 
-.cta-btn {
+.hero .cta-btn {
   padding: 15px 30px;
   background-color: rgb(157, 0, 230);
   color: white;
@@ -243,7 +267,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.cta-btn:hover {
+.hero .cta-btn:hover {
   background-color: #ff4c39;
 }
 
@@ -272,7 +296,7 @@ body {
 
 /* Hover effect for background image */
 .hero:hover {
-  background-image: url("image/Background 27.png"); /* Change to another image */
+  background-image: url("image/6.jpg"); /* Change to another image */
 }
 
 /* Responsive Design */
@@ -308,6 +332,18 @@ body {
 }
 
 /* Hero section Css End  */
+
+/* video section css  */
+
+.video-wrapper {
+  max-width: 50%;
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 /* Special Offers Section */
 .special-offers {
@@ -618,8 +654,8 @@ body {
 }
 
 .benefit-box img {
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 190px;
   margin-bottom: 15px;
 }
 
@@ -631,6 +667,28 @@ body {
 
 .benefit-box p {
   font-size: 1rem;
+}
+
+/* Styling the Read More button */
+.read-more-btn {
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-decoration: none; /* Remove underline if using <a> tag */
+}
+
+/* Hover effect for Read More button */
+.read-more-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 /* Responsive Design */
@@ -1627,7 +1685,8 @@ button.cta-btn:hover {
 
 /* Testimonial Section Styling */
 .testimonial-section {
-  background: url("image/Background 27.png") no-repeat center center/cover;
+  /* background: url("image/Background 27.png") no-repeat center center/cover; */
+  background-color: #eeeee;
   padding: 100px 20px;
   text-align: center;
 }
@@ -2045,40 +2104,82 @@ button.cta-btn:hover {
 /* Modal Background Overlay */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 10%; /* Start at the top */
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: flex-start; /* Align modal to the top */
+  justify-content: center;
+  transform: translateX(-50%);
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 400px;
-  margin: 15% auto; /* Centered */
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
   text-align: center;
-  font-size: 18px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.3);
+  animation: fadeDown 0.5s ease-in-out forwards;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.modal-content p {
+  padding-top: 20px;
 }
 
 /* Close Button Style */
 .close {
-  color: #aaa;
-  font-size: 28px;
+  color: #555;
+  font-size: 30px;
   font-weight: bold;
   position: absolute;
   top: 10px;
   right: 20px;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .close:hover,
 .close:focus {
-  color: #333;
+  color: #d32f2f;
+}
+
+/* OK Button */
+.modal-content button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.modal-content button:hover {
+  background: #0056b3;
+}
+
+/* Fade Down Animation */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
