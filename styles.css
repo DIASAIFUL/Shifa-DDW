@@ -1740,6 +1740,11 @@ section {
   color: #333;
 }
 
+.serch-error-box {
+  width: 100%;
+  text-align: center;
+  height: 300px;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .search-box {
