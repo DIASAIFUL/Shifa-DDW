@@ -38,54 +38,95 @@
 </button>
 </header>
     
-  <section class="contact-section">
+
+<!-- hero section  -->
+ 
+<section class="health-hero">
+  <div class="health-hero-content">
+    <h1 class="health-hero-title">Contact Us</h1>
+  </div>
+</section>
+
+  <!-- new contact form  -->
+  <div class="contact-section">
     <div class="contact-container">
-      <div class="contact-form">
-        <h2>Contact Us</h2>
-        <p>We'd love to hear from you! Please fill out the form below or contact us directly.</p>
-        
-        <form action="#" method="POST">
-          <div class="form-group">
-            <label for="name">First Name</label>
-            <input type="text" id="fname" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="name">Last Name</label>
-            <input type="text" id="lname" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="cta-btn">Send Message</button>
-        </form>
-      </div>
-
-
-      
-      <div class="contact-info">
-        <h3>Our Location</h3>
-        <br>
-        <p><strong>Address:</strong>123 Business St, Suite 456, City, Country</p>
-        <br>
-        <div class="contact-details">
-            <p><strong>Phone:</strong> (123) 456-7890</p>
-            <p><strong>Email:</strong> contact@company.com</p>
-          </div>
-          <br>
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Have a question? We’d love to hear from you. Get in touch using the form below or reach out through our details.</p><br>
+            <div class="contact-details">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Standing Desk Street, New York, USA</p>
+                <p><i class="fas fa-envelope"></i> support@standingdesks.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+            </div>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
 
-        
-
-      </div>
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="#" method="POST" id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
-  </section>
+</div>
+
+<!-- Map Section (Under Contact Section) -->
+<div class="map-section">
+    <h2>Find Us Here</h2>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.27991403375!2d-74.25987568780012!3d40.69767006460348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b268b7e6bb%3A0xa0b11b34b6f38e3!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2s!4v1642684708217!5m2!1sen!2s" 
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+
+
+<!-- Footer section start -->
+
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-about">
+          <h2>Standing Desks Ltd</h2>
+          <p>Your health and productivity are our priority. Explore our wide range of standing desks to improve your workspace and wellbeing.</p>
+      </div>
+      <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="rising-desks.html">Rising Desks</a></li>
+              <li><a href="health-benefits.html">Health Benefits</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="shop.html">Shop</a></li>
+          </ul>
+      </div>
+      <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+              <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </div>
+  </div>
+  <hr>
+  <div class="footer-bottom">
+      <p>&copy; 2025 Standing Desks Ltd. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Footer end  -->
 
   <script src="script.js"></script>
 </body>

@@ -11,16 +11,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Handle the form submission (contact form)
-  const form = document.querySelector("form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();  // Prevent form submission (no page reload)
+// Handle the form submission (contact form)
+const form = document.getElementById("contactForm"); // Target the form by ID
 
-      // Show a confirmation message
-      alert("Thank you for contacting us! We will get back to you soon.");
-      form.reset(); // Reset the form
-    });
-  }
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();  // Prevent form submission (no page reload)
+
+    // Show a confirmation message
+    alert("Thank you for contacting us! We will get back to you soon.");
+
+    form.reset(); // Reset the form
+  });
+}
+
 
   // Handle the 'Add to Cart' button click
   const addToCartButton = document.querySelector(".add-to-cart-btn");
@@ -151,6 +155,7 @@ showSlide(currentIndex);
 
 // var modal = document.getElementById("helloModal");
 // var closeBtn = document.getElementsByClassName("close")[0];
+// var okButton = document.getElementById("okButton");
 
 // // Show modal on page load
 // window.onload = function() {
@@ -165,6 +170,14 @@ showSlide(currentIndex);
 // closeBtn.onclick = function() {
 //   modal.style.display = "none";
 // };
+
+// okButton.onclick = function() {
+//     modal.style.display = "none";
+//   };
+
+
+
+
 
 // Get the modal, close button, and "Okay" button
 var modal = document.getElementById("helloModal");
