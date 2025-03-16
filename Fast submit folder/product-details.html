@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Singal Product</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <a href="index.html"> Standing Desks Ltd</a>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rising-desks.html" class="active">Rising Desks</a></li>
+        <li><a href="health-benefits.html">Health Benefits</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <a href="cart.html" id="cartLink" class="cart-btn">
+        <i class="fas fa-shopping-cart"></i> Cart
+    </a>
+
+    <!-- Hamburger Menu -->
+    <button class="hamburger">
+        <i class="fas fa-bars bar-icon"></i> <!-- Default -->
+        <i class="fas fa-times close-icon"></i> <!-- Hidden initially -->
+    </button>
+</header>
+
+<!-- Product Detail Section with Image Gallery -->
+<section class="product-detail-section">
+    <div class="product-container">
+        <!-- Image Gallery -->
+        <div class="product-image-gallery">
+            <div class="main-image">
+                <img src="image/5.jpg" alt="Main Product Image" id="mainImage">
+            </div>
+            <div class="thumbnail-images">
+                <img src="image/4.jpg" alt="Thumbnail Image 1" class="thumbnail" onclick="changeImage(this)">
+                <img src="image/22.jpg" alt="Thumbnail Image 2" class="thumbnail" onclick="changeImage(this)">
+                <img src="image/21.jpg" alt="Thumbnail Image 3" class="thumbnail" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <!-- Product Information -->
+        <div class="product-info">
+            <h2>Adjustable Standing Desk</h2>
+            <p class="product-price">$299.99</p>
+            <p class="product-description">Experience ultimate comfort and productivity with our adjustable standing desk. Designed for ergonomics and flexibility, it helps reduce back pain and improves posture.</p>
+            <!-- Add to Cart button -->
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<div class="product-details">
+  <!-- Product Description Section -->
+  <div class="product-info-description">
+    <h2>Product Description</h2>
+    <p>This is a high-quality standing desk designed to enhance your health and productivity. With adjustable height, easy assembly, and a modern aesthetic, it suits any office space.</p>
+    <ul>
+      <li>Height adjustable</li>
+      <li>Durable steel frame</li>
+      <li>Easy assembly</li>
+    </ul>
+  </div>
+
+  <!-- Customer Reviews Section -->
+  <div class="customer-reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">
+      <p><strong>John D.</strong> - ⭐⭐⭐⭐⭐</p>
+      <p>"I love this desk! It was easy to assemble, and I feel much more productive when I'm standing." </p>
+    </div>
+    <div class="review">
+      <p><strong>Emily R.</strong> - ⭐⭐⭐⭐⭐</p>
+      <p>"The desk is solid, and the height adjustability is perfect. Highly recommend!"</p>
+    </div>
+    <div class="review">
+      <p><strong>Michael T.</strong> - ⭐⭐⭐⭐</p>
+      <p>"Great product, though the assembly instructions could be a little clearer. Still, very happy with it!"</p>
+    </div>
+
+    <!-- Custom Review Form -->
+    <div class="review-form">
+      <h3>Submit Your Review</h3>
+      <form action="#" method="POST">
+        <label for="reviewer-name">Your Name:</label>
+        <input type="text" id="reviewer-name" name="reviewer-name" required>
+        
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">⭐</option>
+        </select>
+        
+        <label for="review-text">Your Review:</label>
+        <textarea id="review-text" name="review-text" rows="4" required></textarea>
+        
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
