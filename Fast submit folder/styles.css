@@ -110,7 +110,7 @@ body {
 
 /* Cart Button */
 .cart-btn {
-  background-color: #ff4c39;
+  background: rgb(157 0 230 / 0%);
   color: white;
   border: none;
   padding: 10px 16px;
@@ -620,8 +620,9 @@ a.cart-btn {
 #health-benefits {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #4caf50, #2e7d32);
-  color: white;
+  /* background: linear-gradient(135deg, #4caf50, #2e7d32); */
+  background: rgb(246, 244, 247);
+  color: #040404;
 }
 
 .benefits-header h2 {
@@ -662,7 +663,7 @@ a.cart-btn {
 .benefit-box h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #2e7d32;
+  color: rgb(144, 76, 175);
 }
 
 .benefit-box p {
@@ -1075,13 +1076,14 @@ section {
   padding: 110px 10%;
   background: white;
   margin-bottom: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
   border-radius: 10px;
 }
 
 /* Introduction Section */
 .intro {
   text-align: center;
+  margin-top: 60px;
 }
 
 .intro h1 {
@@ -1311,8 +1313,6 @@ section {
   }
 }
 
-/* Contact Page css start  */
-
 /* Wellness Services Section */
 .wellness-services {
   display: flex;
@@ -1442,7 +1442,7 @@ section {
 /* Testimonial Section Styling */
 .testimonial-section {
   /* background: url("image/Background 27.png") no-repeat center center/cover; */
-  /* background-color: #eeeee; */
+  background: #fff;
   padding: 100px 20px;
   text-align: center;
   box-shadow: none !importent;
@@ -2279,6 +2279,7 @@ section {
 
 /* Footer Styling */
 .footer {
+  width: 100%;
   background-color: #333;
   color: #fff;
   padding: 40px 20px;
@@ -2349,7 +2350,7 @@ section {
 }
 
 .social-icon:hover {
-  color: #4caf50;
+  color: #9049c1;
 }
 
 .footer-bottom {
