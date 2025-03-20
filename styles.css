@@ -31,31 +31,46 @@ body {
 }
 
 /* Logo */
+.logo {
+  font-weight: 900 bolded;
+  font-size: 30px;
+}
+.logo span {
+  color: #00ff10;
+}
 .logo a {
   text-decoration: none;
   color: white;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 /* Navigation */
-.nav {
-  flex: 1;
+/* Navigation links */
+.nav-links {
+  list-style: none;
   display: flex;
   justify-content: center;
   position: relative;
 }
 
-.nav a {
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
   position: relative;
   text-decoration: none;
-  color: white;
   font-size: 18px;
   display: inline-block;
   padding-bottom: 5px; /* Space for underline */
 }
 
-.nav a::after {
+.nav-links li a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -68,44 +83,70 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.nav a:hover::after {
+.nav-links a:hover::after {
   transform: scaleX(1);
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
+/* Hidden checkbox for toggling */
+#menu-toggle {
+  display: none;
 }
 
-.nav-links li {
-  margin: 0 15px;
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  position: relative;
-}
+/* Mobile styles */
+@media (max-width: 768px) {
+  .logo {
+    font-weight: 600 bolded;
+    font-size: 18px;
+    margin-right: 14px;
+  }
 
-/* Underline effect */
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0%;
-  height: 2px;
-  background-color: red;
-  transition: width 0.3s ease-in-out;
-}
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #333;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
 
-.nav-links a:hover::after {
-  width: 100%;
-}
+  .hamburger {
+    display: block;
+  }
 
-.nav-links a:hover {
-  color: #ff4c39;
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* Animated hamburger icon */
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 5px;
+    transition: 0.3s;
+  }
+
+  /* Change icon to "X" when menu is active */
+  #menu-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #menu-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
 
 /* Cart Button */
@@ -137,66 +178,15 @@ a.cart-btn {
 
 @media (max-width: 768px) {
   .cart-btn {
-    margin-right: 50px;
-  }
-  
-
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: -100%; /* Start off-screen */
-    background: #333;
-    width: 60%; /* Adjust as needed */
-    height: 100vh;
-    padding: 50px 20px;
-    text-align: center;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000;
-  }
-
-  .nav-links.active {
-    right: 0; /* Slide in when active */
-    margin-top: 70px;
-  }
-
-  .nav-links li {
-    margin: 10px;
-  }
-
-  /* Hamburger Icon */
-  .hamburger {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 1100;
-  }
-
-  /* Hide close icon by default */
-  .hamburger .close-icon {
-    display: none;
-  }
-
-  /* When menu is active, toggle icons */
-  .hamburger.active .bar-icon {
-    display: none;
-  }
-
-  .hamburger.active .close-icon {
-    display: inline;
+    margin-right: 0px;
   }
 }
+/* Cart Button  end*/
+
+/* Nav section End  */
 
 /* hero Section CSS Start  */
 
-/* Full-screen hero section */
 .hero {
   position: relative;
   height: 70vh;
@@ -340,32 +330,167 @@ a.cart-btn {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Special Offers Section */
-.special-offers {
-  text-align: center;
-  padding: 60px 20px;
-  background: #f8f9fa;
-}
-
-.special-offers h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.offer-grid {
+/* Wellness Services Section */
+.wellness-services {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  padding: 60px;
+  background: #f9f9f9;
+  max-width: 100%;
+  margin: auto;
 }
 
+/* Image Section */
+.wellness-image {
+  flex: 1;
+  max-width: 50%;
+  padding: 20px;
+}
+
+.wellness-image img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Content Section */
+.wellness-content {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+
+.wellness-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.wellness-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.wellness-content ul {
+  list-style: none;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.wellness-content ul li {
+  font-size: 1.1rem;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.wellness-content ul li::before {
+  content: "✔";
+  color: #ff9800;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e68900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wellness-services {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .wellness-image {
+    max-width: 80%;
+  }
+
+  .wellness-image img {
+    height: 300px;
+  }
+
+  .wellness-content {
+    max-width: 90%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .wellness-services {
+    padding: 20px;
+  }
+
+  .wellness-image {
+    max-width: 100%;
+  }
+
+  .wellness-image img {
+    height: 250px;
+  }
+
+  .wellness-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .wellness-content p,
+  .wellness-content ul li {
+    font-size: 1rem;
+  }
+}
+
+/* Special Offers Section */
+#special-offers {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+}
+
+.offers-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.offers-header p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Offers Grid */
+.offers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Offer Item */
 .offer-item {
   position: relative;
-  width: 300px;
+  width: 320px;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -375,28 +500,53 @@ a.cart-btn {
 
 .offer-item img {
   width: 100%;
+  display: block;
   border-radius: 10px;
+  filter: brightness(50%);
+  transition: filter 0.3s ease-in-out;
 }
 
-.offer-details {
+.offer-item:hover img {
+  filter: brightness(80%);
+}
+
+/* Offer Overlay */
+.offer-overlay {
   position: absolute;
   bottom: 0;
+  width: 100%;
   background: rgba(0, 0, 0, 0.7);
   color: white;
-  width: 100%;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
+  opacity: 1;
+  transition: background 0.3s ease-in-out;
 }
 
-.offer-item:hover .offer-details {
-  transform: translateY(0);
+.offer-item:hover .offer-overlay {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Offer Button */
+.offer-btn {
+  background: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.offer-btn:hover {
+  background: #e64a19;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .offer-grid {
+  .offers-grid {
     flex-direction: column;
     align-items: center;
   }
@@ -515,107 +665,10 @@ a.cart-btn {
   }
 }
 
-/* Special Offers Section */
-#special-offers {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #ff9800, #ff5722);
-  color: white;
-}
-
-.offers-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.offers-header p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* Offers Grid */
-.offers-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Offer Item */
-.offer-item {
-  position: relative;
-  width: 320px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
-}
-
-.offer-item:hover {
-  transform: scale(1.05);
-}
-
-.offer-item img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-  filter: brightness(50%);
-  transition: filter 0.3s ease-in-out;
-}
-
-.offer-item:hover img {
-  filter: brightness(80%);
-}
-
-/* Offer Overlay */
-.offer-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 20px;
-  text-align: center;
-  opacity: 1;
-  transition: background 0.3s ease-in-out;
-}
-
-.offer-item:hover .offer-overlay {
-  background: rgba(0, 0, 0, 0.9);
-}
-
-/* Offer Button */
-.offer-btn {
-  background: #ff5722;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
-  margin-top: 10px;
-}
-
-.offer-btn:hover {
-  background: #e64a19;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .offers-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 /* Health Benefits Section */
 #health-benefits {
   text-align: center;
   padding: 60px 20px;
-  /* background: linear-gradient(135deg, #4caf50, #2e7d32); */
   background: rgb(246, 244, 247);
   color: #040404;
 }
@@ -1308,132 +1361,6 @@ section {
   }
 }
 
-/* Wellness Services Section */
-.wellness-services {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 60px;
-  background: #f9f9f9;
-  max-width: 100%;
-  margin: auto;
-}
-
-/* Image Section */
-.wellness-image {
-  flex: 1;
-  max-width: 50%;
-  padding: 20px;
-}
-
-.wellness-image img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-  height: 400px;
-  object-fit: cover;
-}
-
-/* Content Section */
-.wellness-content {
-  flex: 1;
-  max-width: 50%;
-  text-align: left;
-}
-
-.wellness-content h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.wellness-content p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.wellness-content ul {
-  list-style: none;
-  padding: 0;
-  padding-bottom: 20px;
-}
-
-.wellness-content ul li {
-  font-size: 1.1rem;
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
-}
-
-.wellness-content ul li::before {
-  content: "✔";
-  color: #ff9800;
-  font-size: 1.2rem;
-  margin-right: 10px;
-}
-
-/* Button */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #ff9800;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #e68900;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .wellness-services {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px;
-  }
-
-  .wellness-image {
-    max-width: 80%;
-  }
-
-  .wellness-image img {
-    height: 300px;
-  }
-
-  .wellness-content {
-    max-width: 90%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .wellness-services {
-    padding: 20px;
-  }
-
-  .wellness-image {
-    max-width: 100%;
-  }
-
-  .wellness-image img {
-    height: 250px;
-  }
-
-  .wellness-content h2 {
-    font-size: 1.8rem;
-  }
-
-  .wellness-content p,
-  .wellness-content ul li {
-    font-size: 1rem;
-  }
-}
-
 /* Testimonial Section Styling */
 .testimonial-section {
   background: #fff;
@@ -1751,8 +1678,6 @@ section {
   }
 }
 
-
-
 /* new slide show code  */
 .special-offer-slider {
   position: relative;
@@ -1783,9 +1708,15 @@ section {
   padding: 20px;
 }
 
-.slide:nth-child(1) { background: #ff5733; }
-.slide:nth-child(2) { background: #bbb80f; }
-.slide:nth-child(3) { background: #5457e7; }
+.slide:nth-child(1) {
+  background: #ff5733;
+}
+.slide:nth-child(2) {
+  background: #bbb80f;
+}
+.slide:nth-child(3) {
+  background: #5457e7;
+}
 
 .offer-content h2 {
   font-size: 2rem;
@@ -1813,10 +1744,22 @@ section {
 }
 
 @keyframes slide {
-  0%, 25% { transform: translateX(0%); }
-  30%, 55% { transform: translateX(-100%); }
-  60%, 85% { transform: translateX(-200%); }
-  90%, 100% { transform: translateX(0%); }
+  0%,
+  25% {
+    transform: translateX(0%);
+  }
+  30%,
+  55% {
+    transform: translateX(-100%);
+  }
+  60%,
+  85% {
+    transform: translateX(-200%);
+  }
+  90%,
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .dots {
@@ -1837,37 +1780,82 @@ section {
   transition: background-color 0.3s ease;
 }
 
- /* Synchronizing dot colors with slides */
- @keyframes dotColor {
-  0%, 25% { background-color: #717171; }
-  30%, 55% { background-color: #bbb; }
-  60%, 85% { background-color: #bbb; }
-  90%, 100% { background-color: #717171; }
+/* Synchronizing dot colors with slides */
+@keyframes dotColor {
+  0%,
+  25% {
+    background-color: #717171;
+  }
+  30%,
+  55% {
+    background-color: #bbb;
+  }
+  60%,
+  85% {
+    background-color: #bbb;
+  }
+  90%,
+  100% {
+    background-color: #717171;
+  }
 }
 
 @keyframes dotColor2 {
-  0%, 25% { background-color: #bbb; }
-  30%, 55% { background-color: #717171; }
-  60%, 85% { background-color: #bbb; }
-  90%, 100% { background-color: #bbb; }
+  0%,
+  25% {
+    background-color: #bbb;
+  }
+  30%,
+  55% {
+    background-color: #717171;
+  }
+  60%,
+  85% {
+    background-color: #bbb;
+  }
+  90%,
+  100% {
+    background-color: #bbb;
+  }
 }
 
 @keyframes dotColor3 {
-  0%, 25% { background-color: #bbb; }
-  30%, 55% { background-color: #bbb; }
-  60%, 85% { background-color: #717171; }
-  90%, 100% { background-color: #bbb; }
+  0%,
+  25% {
+    background-color: #bbb;
+  }
+  30%,
+  55% {
+    background-color: #bbb;
+  }
+  60%,
+  85% {
+    background-color: #717171;
+  }
+  90%,
+  100% {
+    background-color: #bbb;
+  }
 }
 
-.dot:nth-child(1) { animation: dotColor 15s infinite; }
-.dot:nth-child(2) { animation: dotColor2 15s infinite; }
-.dot:nth-child(3) { animation: dotColor3 15s infinite; }
+.dot:nth-child(1) {
+  animation: dotColor 15s infinite;
+}
+.dot:nth-child(2) {
+  animation: dotColor2 15s infinite;
+}
+.dot:nth-child(3) {
+  animation: dotColor3 15s infinite;
+}
 
 /* end  */
 /* Responsive */
 @media (max-width: 768px) {
   .special-offer-slider {
     height: 250px;
+  }
+  .offer-content {
+    width: 80%;
   }
 
   .offer-content h2 {
@@ -2404,89 +2392,3 @@ section {
 }
 
 /* Footer end  */
-
-
-
-
-
-
-
-
-/* nav */
-
-        /* Hidden checkbox for toggling */
-        #menu-toggle {
-          display: none;
-      }
-
-      /* Hamburger icon */
-      .hamburger {
-          display: none;
-          cursor: pointer;
-          font-size: 24px;
-      }
-
-      /* Navigation links */
-      .nav-links {
-          list-style: none;
-          display: flex;
-      }
-
-      .nav-links li {
-          margin: 0 10px;
-      }
-
-      .nav-links a {
-          color: white;
-          text-decoration: none;
-          padding: 10px;
-          transition: color 0.3s;
-      }
-
-      .nav-links a:hover {
-          color: #ff9800;
-      }
-
-      /* Mobile styles */
-      @media (max-width: 768px) {
-          .hamburger {
-              display: block;
-          }
-
-          .nav-links {
-              display: none;
-              flex-direction: column;
-              position: absolute;
-              background: #333;
-              top: 60px;
-              right: 0;
-              width: 200px;
-              padding: 10px;
-          }
-
-          /* Show menu when checkbox is checked */
-          #menu-toggle:checked ~ .nav-links {
-              display: flex;
-          }
-
-          /* Animated hamburger icon */
-          .hamburger span {
-              display: block;
-              width: 30px;
-              height: 4px;
-              background: white;
-              margin: 5px;
-              transition: 0.3s;
-          }
-
-          /* Change icon to "X" when menu is active */
-          #menu-toggle:checked ~ .hamburger span:nth-child(1) {
-              transform: rotate(45deg) translate(5px, 5px);
-          }
-          #menu-toggle:checked ~ .hamburger span:nth-child(2) {
-              opacity: 0;
-          }
-          #menu-toggle:checked ~ .hamburger span:nth-child(3) {
-              transform: rotate(-45deg) translate(5px, -5px);
-          }
-      }
