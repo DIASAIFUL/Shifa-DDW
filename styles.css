@@ -134,17 +134,12 @@ body {
 a.cart-btn {
   text-decoration-line: none;
 }
-.hamburger {
-  display: none; /* Hidden on larger screens */
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
 
 @media (max-width: 768px) {
   .cart-btn {
     margin-right: 50px;
   }
+  
 
   .nav-links {
     display: flex;
@@ -167,7 +162,7 @@ a.cart-btn {
   }
 
   .nav-links li {
-    margin: 20px 0;
+    margin: 10px;
   }
 
   /* Hamburger Icon */
@@ -1441,11 +1436,10 @@ section {
 
 /* Testimonial Section Styling */
 .testimonial-section {
-  /* background: url("image/Background 27.png") no-repeat center center/cover; */
   background: #fff;
   padding: 100px 20px;
   text-align: center;
-  box-shadow: none !importent;
+  box-shadow: none !important;
 }
 
 /* Dark Overlay for Readability */
@@ -1757,51 +1751,44 @@ section {
   }
 }
 
-/* Special Offer Slideshow */
+
+
+/* new slide show code  */
 .special-offer-slider {
   position: relative;
-  width: 100%;
-  height: 300px; /* Set a fixed height */
+  max-width: 100%;
+  height: 400px;
   overflow: hidden;
-  background: linear-gradient(135deg, #ff6600, #ff3300);
+  background: #f8f8f8;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .slides-container {
-  position: relative;
-  width: 100%;
   display: flex;
-  transition: transform 0.6s ease-in-out;
+  width: 300%;
+  animation: slide 15s infinite;
 }
 
 .slide {
-  min-width: 100%;
-  position: absolute;
+  width: 100%;
+  flex-shrink: 0;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-  position: relative;
-}
-
-.offer-content {
   color: white;
-  text-align: center;
-  width: 80%;
+  padding: 20px;
 }
+
+.slide:nth-child(1) { background: #ff5733; }
+.slide:nth-child(2) { background: #bbb80f; }
+.slide:nth-child(3) { background: #5457e7; }
 
 .offer-content h2 {
   font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
@@ -1812,44 +1799,71 @@ section {
 
 .cta-btn {
   display: inline-block;
-  background-color: white;
-  color: #ff3300;
-  padding: 12px 20px;
-  font-size: 1rem;
-  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 .cta-btn:hover {
-  background-color: #ffcc00;
-  color: #000;
+  background: rgb(157, 0, 230);
 }
 
-/* Navigation Dots */
+@keyframes slide {
+  0%, 25% { transform: translateX(0%); }
+  30%, 55% { transform: translateX(-100%); }
+  60%, 85% { transform: translateX(-200%); }
+  90%, 100% { transform: translateX(0%); }
+}
+
 .dots {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
   text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .dot {
   height: 12px;
   width: 12px;
   margin: 0 5px;
-  background-color: white;
+  background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.dot.active {
-  background-color: #ffcc00;
+ /* Synchronizing dot colors with slides */
+ @keyframes dotColor {
+  0%, 25% { background-color: #717171; }
+  30%, 55% { background-color: #bbb; }
+  60%, 85% { background-color: #bbb; }
+  90%, 100% { background-color: #717171; }
 }
 
+@keyframes dotColor2 {
+  0%, 25% { background-color: #bbb; }
+  30%, 55% { background-color: #717171; }
+  60%, 85% { background-color: #bbb; }
+  90%, 100% { background-color: #bbb; }
+}
+
+@keyframes dotColor3 {
+  0%, 25% { background-color: #bbb; }
+  30%, 55% { background-color: #bbb; }
+  60%, 85% { background-color: #717171; }
+  90%, 100% { background-color: #bbb; }
+}
+
+.dot:nth-child(1) { animation: dotColor 15s infinite; }
+.dot:nth-child(2) { animation: dotColor2 15s infinite; }
+.dot:nth-child(3) { animation: dotColor3 15s infinite; }
+
+/* end  */
 /* Responsive */
 @media (max-width: 768px) {
   .special-offer-slider {
@@ -2081,7 +2095,6 @@ section {
   color: white;
   padding: 12px 25px;
   font-size: 1.1em;
-  border: 2px solid rgb(144, 76, 175);
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -2089,7 +2102,8 @@ section {
 }
 
 .review-form button:hover {
-  background-color: rgb(238, 238, 238);
+  border: 2px solid rgb(144, 76, 175);
+  background-color: rgb(255, 255, 255);
   color: rgb(144, 76, 175);
 }
 
@@ -2233,7 +2247,6 @@ section {
   background: rgb(157, 0, 230);
   color: white;
   font-size: 1.1em;
-  border: 2px solid rgb(157, 0, 230);
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s;
@@ -2242,6 +2255,7 @@ section {
 .contact-form button:hover {
   background: rgb(255, 255, 255);
   color: rgb(157, 0, 230);
+  border: 2px solid rgb(157, 0, 230);
 }
 /* Map Section */
 .map-section {
@@ -2390,3 +2404,89 @@ section {
 }
 
 /* Footer end  */
+
+
+
+
+
+
+
+
+/* nav */
+
+        /* Hidden checkbox for toggling */
+        #menu-toggle {
+          display: none;
+      }
+
+      /* Hamburger icon */
+      .hamburger {
+          display: none;
+          cursor: pointer;
+          font-size: 24px;
+      }
+
+      /* Navigation links */
+      .nav-links {
+          list-style: none;
+          display: flex;
+      }
+
+      .nav-links li {
+          margin: 0 10px;
+      }
+
+      .nav-links a {
+          color: white;
+          text-decoration: none;
+          padding: 10px;
+          transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+          color: #ff9800;
+      }
+
+      /* Mobile styles */
+      @media (max-width: 768px) {
+          .hamburger {
+              display: block;
+          }
+
+          .nav-links {
+              display: none;
+              flex-direction: column;
+              position: absolute;
+              background: #333;
+              top: 60px;
+              right: 0;
+              width: 200px;
+              padding: 10px;
+          }
+
+          /* Show menu when checkbox is checked */
+          #menu-toggle:checked ~ .nav-links {
+              display: flex;
+          }
+
+          /* Animated hamburger icon */
+          .hamburger span {
+              display: block;
+              width: 30px;
+              height: 4px;
+              background: white;
+              margin: 5px;
+              transition: 0.3s;
+          }
+
+          /* Change icon to "X" when menu is active */
+          #menu-toggle:checked ~ .hamburger span:nth-child(1) {
+              transform: rotate(45deg) translate(5px, 5px);
+          }
+          #menu-toggle:checked ~ .hamburger span:nth-child(2) {
+              opacity: 0;
+          }
+          #menu-toggle:checked ~ .hamburger span:nth-child(3) {
+              transform: rotate(-45deg) translate(5px, -5px);
+          }
+      }

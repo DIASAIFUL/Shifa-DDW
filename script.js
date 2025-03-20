@@ -1,14 +1,44 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Hamburger menu toggle
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Hamburger menu toggle
+//   const hamburger = document.querySelector(".hamburger");
+//   const navLinks = document.querySelector(".nav-links");
 
-  if (hamburger && navLinks) {
-    hamburger.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-      hamburger.classList.toggle("active"); // Toggle icon change
-    });
+//   if (hamburger && navLinks) {
+//     hamburger.addEventListener("click", function () {
+//       navLinks.classList.toggle("active");
+//       hamburger.classList.toggle("active"); // Toggle icon change
+//     });
+//   }
+
+
+// Get the modal, close button, and "Okay" button
+var modal = document.getElementById("helloModal");
+var closeBtn = document.getElementsByClassName("close")[0];
+var okButton = document.getElementById("okButton");
+
+// Show the modal when the page loads
+window.onload = function() {
+  modal.style.display = "block";
+};
+
+// Close the modal when the user clicks on the "×" button
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+};
+
+// Close the modal when the user clicks the "Okay" button
+okButton.onclick = function() {
+  modal.style.display = "none";
+};
+
+// Close the modal if the user clicks anywhere outside the modal content
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
   }
+};
+
+
 
   // Handle the form submission (contact form)
 // Handle the form submission (contact form)
@@ -63,7 +93,7 @@ if (form) {
       }
     });
   }
-});
+// });
 
 //   // Handle the 'Place Order' button click
 //   const checkoutButton = document.querySelector(".Order-btn");
@@ -118,38 +148,38 @@ function searchProducts() {
 
 
 
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const dots = document.querySelectorAll(".dot");
+// let currentIndex = 0;
+// const slides = document.querySelectorAll(".slide");
+// const dots = document.querySelectorAll(".dot");
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active");
-    dots[i].classList.remove("active");
-  });
+// function showSlide(index) {
+//   slides.forEach((slide, i) => {
+//     slide.classList.remove("active");
+//     dots[i].classList.remove("active");
+//   });
 
-  slides[index].classList.add("active");
-  dots[index].classList.add("active");
-  currentIndex = index;
-}
+//   slides[index].classList.add("active");
+//   dots[index].classList.add("active");
+//   currentIndex = index;
+// }
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-}
+// function nextSlide() {
+//   currentIndex = (currentIndex + 1) % slides.length;
+//   showSlide(currentIndex);
+// }
 
-// Auto-slide every 5 seconds
-setInterval(nextSlide, 5000);
+// // Auto-slide every 5 seconds
+// setInterval(nextSlide, 5000);
 
-// Manual control with dots
-function setSlide(index) {
-  showSlide(index);
-}
+// // Manual control with dots
+// function setSlide(index) {
+//   showSlide(index);
+// }
 
-// Show first slide
-showSlide(currentIndex);
+// // Show first slide
+// showSlide(currentIndex);
 
-// slide show end 
+// // slide show end 
 
 
 
@@ -175,34 +205,4 @@ showSlide(currentIndex);
 //     modal.style.display = "none";
 //   };
 
-
-
-
-
-// Get the modal, close button, and "Okay" button
-var modal = document.getElementById("helloModal");
-var closeBtn = document.getElementsByClassName("close")[0];
-var okButton = document.getElementById("okButton");
-
-// Show the modal when the page loads
-window.onload = function() {
-  modal.style.display = "block";
-};
-
-// Close the modal when the user clicks on the "×" button
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-};
-
-// Close the modal when the user clicks the "Okay" button
-okButton.onclick = function() {
-  modal.style.display = "none";
-};
-
-// Close the modal if the user clicks anywhere outside the modal content
-window.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
 

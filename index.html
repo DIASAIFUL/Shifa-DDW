@@ -12,7 +12,7 @@
 <body>
 
   <header class="header">
-    <div class="logo">
+    <!-- <div class="logo">
       <a href="index.html"> Standing Desks Ltd</a>
     </div>
 
@@ -24,13 +24,32 @@
         <li><a href="shop.html">Shop</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
-    </nav>
+    </nav> -->
 
-    <!-- Search Bar -->
-    <!-- <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search...">
-        <button onclick="searchFunction()"><i class="fas fa-search"></i></button>
-    </div> -->
+    <div class="logo">Standing Desk Co.</div>
+        
+        <!-- Hidden Checkbox -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- Hamburger Icon -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rising-desks.html" class="active">Rising Desks</a></li>
+          <li><a href="health-benefits.html">Health Benefits</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+
+
+
 
     <a href="cart.html" class="cart-btn">
       <i class="fas fa-shopping-cart"></i> Cart
@@ -38,10 +57,10 @@
 
 
     <!-- Hamburger Menu -->
-    <button class="hamburger">
-      <i class="fas fa-bars bar-icon"></i> <!-- Default -->
-      <i class="fas fa-times close-icon"></i> <!-- Hidden initially -->
-    </button>
+    <!-- <button class="hamburger">
+      <i class="fas fa-bars bar-icon"></i> 
+      <i class="fas fa-times close-icon"></i> >
+    </button> -->
   </header>
 
 
@@ -109,48 +128,64 @@
 
 
 
-  <!-- Special Offer Slideshow -->
-  <section class="special-offer-slider" id="special-offers">
-    <div class="slides-container">
-      <div class="slide active">
-        <div class="offer-content">
-          <h2>Limited Time Offer!</h2>
-          <p>Upgrade your workspace today and enjoy <strong>25% OFF</strong> on all standing desks!</p>
-          <p>Hurry, this deal ends soon!</p>
-          <a href="shop.html" class="cta-btn">Shop Now</a>
-        </div>
+ <!-- Special Offer Slideshow -->
+ <section class="special-offer-slider" id="special-offers">
+  <div class="slides-container">
+    <div class="slide">
+      <div class="offer-content">
+        <h2>Limited Time Offer!</h2>
+        <p>Upgrade your workspace today and enjoy <strong>25% OFF</strong> on all standing desks!</p>
+        <p>Hurry, this deal ends soon!</p>
+        <a href="shop.html" class="cta-btn">Shop Now</a>
       </div>
+    </div>
 
-      <div class="slide">
-        <div class="offer-content">
-          <h2>Spring Sale</h2>
-          <p>Work Better – Buy 1 Desk, Get an Ergonomic Chair <strong>50% OFF</strong></p>
-          <p>Don't miss out on this deal!</p>
-          <a href="shop.html" class="cta-btn">Claim Offer</a>
-        </div>
+    <div class="slide">
+      <div class="offer-content">
+        <h2>Spring Sale</h2>
+        <p>Work Better – Buy 1 Desk, Get an Ergonomic Chair <strong>50% OFF</strong></p>
+        <p>Don't miss out on this deal!</p>
+        <a href="shop.html" class="cta-btn">Claim Offer</a>
       </div>
+    </div>
 
-      <div class="slide">
-        <div class="offer-content">
+    <div class="slide">
+      <div class="offer-content">
+        <h2>Exclusive Deal</h2>
+        <p>Buy 2 Standing Desks & Get <strong>1 Chair FREE</strong>!</p>
+        <p>Limited Stock Available!</p>
+        <a href="shop.html" class="cta-btn">Get This Deal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dots for Indicators -->
+  <div class="dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+
+<!-- 
+  <div class="slideshow-container">
+    <div class="slides">
+        <div class="slide">
           <h2>Exclusive Deal</h2>
           <p>Buy 2 Standing Desks & Get <strong>1 Chair FREE</strong>!</p>
           <p>Limited Stock Available!</p>
           <a href="shop.html" class="cta-btn">Get This Deal</a>
         </div>
-      </div>
+        <div class="slide">Slide 2</div>
+        <div class="slide">Slide 3</div>
     </div>
-
-    <!-- Navigation Dots -->
     <div class="dots">
-      <span class="dot active" onclick="setSlide(0)"></span>
-      <span class="dot" onclick="setSlide(1)"></span>
-      <span class="dot" onclick="setSlide(2)"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
-
-  </section>
-
-
-
+</div> -->
 
 
   <!-- Product grid -->
