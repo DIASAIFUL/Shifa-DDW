@@ -32,7 +32,8 @@ body {
 
 /* Logo */
 .logo {
-  font-weight: 900 bolded;
+  font-weight: 900;
+  font-weight: bold;
   font-size: 30px;
 }
 .logo span {
@@ -102,7 +103,6 @@ body {
 /* Mobile styles */
 @media (max-width: 768px) {
   .logo {
-    font-weight: 600 bolded;
     font-size: 18px;
     margin-right: 14px;
   }

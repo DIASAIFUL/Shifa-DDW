@@ -12,10 +12,17 @@
 <body>
 
   <header class="header">
-    <div class="logo">
-      <a href="home.html"> Standing Desks Ltd</a>
-    </div>
-
+    <div class="logo"><span>Standing </span> Desks Co.</div>
+        
+        <!-- Hidden Checkbox -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- Hamburger Icon -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
     <nav class="nav">
       <ul class="nav-links">
         <li><a href="cart.html">Back To cart</a></li>
@@ -23,11 +30,6 @@
       </ul>
     </nav>
 
-  <!-- Hamburger Menu -->
-  <button class="hamburger">
-      <i class="fas fa-bars bar-icon"></i> <!-- Default -->
-      <i class="fas fa-times close-icon"></i> <!-- Hidden initially -->
-  </button>
 </header>
 <!-- <section class="hero">
   <div class="hero-content">
@@ -70,7 +72,7 @@
     
         <div class="form-group">
             <label for="country">Country</label>
-            <select id="country" required>
+            <select id="country" required size="5">
                 <option value="">Select Country</option>
                 <option value="USA">United States</option>
                 <option value="Canada">Canada</option>
@@ -81,7 +83,7 @@
     
         <div class="form-group">
             <label for="payment-method">Payment Method</label>
-            <select id="payment-method" required>
+            <select id="payment-method" required size="3">
                 <option value="credit-card">Credit Card</option>
                 <option value="paypal">PayPal</option>
                 <option value="bank-transfer">Bank Transfer</option>
@@ -93,7 +95,7 @@
     
 
 
-
+</section>
 
 
 <script src="script.js"></script>
