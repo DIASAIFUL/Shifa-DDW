@@ -55,7 +55,6 @@ if (form) {
   });
 }
 
-
   // Handle the 'Add to Cart' button click
   const addToCartButton = document.querySelector(".add-to-cart-btn");
   if (addToCartButton) {
@@ -68,6 +67,7 @@ if (form) {
       addToCartButton.disabled = true; // Disable the button after click
     });
   }
+
 
   // Handle the 'Place Order' button click (for checkout)
   const checkoutButton = document.querySelector(".Order-btn");
@@ -93,24 +93,7 @@ if (form) {
       }
     });
   }
-// });
 
-//   // Handle the 'Place Order' button click
-//   const checkoutButton = document.querySelector(".Order-btn");
-//   if (checkoutButton) {
-//     checkoutButton.addEventListener("click", function (e) {
-//       // Prevent the default form submission (if it's within a form)
-//       e.preventDefault();
-
-//       // Show the success message
-//       alert("Order placed successfully! Thank you for your purchase.");
-
-//       // Optionally, disable the button after the order is placed
-//       checkoutButton.disabled = true;
-//       checkoutButton.textContent = "Order Completed"; // Change text to indicate completion
-//     });
-//   }
-// });
 
 
 

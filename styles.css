@@ -408,7 +408,7 @@ a.cart-btn {
 }
 
 .btn:hover {
-  background: #e68900;
+  background: #9300e6;
 }
 
 /* Responsive Design */
@@ -651,7 +651,7 @@ a.cart-btn {
 }
 
 .w3-button:hover {
-  background: #333;
+  background: #9300e6;
 }
 
 /* Responsive Design */
@@ -973,7 +973,7 @@ a.cart-btn {
   }
 }
 
-/* Product Detail Page Styles */
+/* Product Detail Page Styles ===================================================================================*/
 .product-detail-section {
   width: 80%;
   max-width: 1000px;
@@ -1109,7 +1109,7 @@ a.cart-btn {
   }
 }
 
-/* Rising Desks Start  */
+/* Rising Desks Start  =====================================================================================================*/
 
 /* General Styles */
 body {
@@ -1267,25 +1267,6 @@ section {
   background: #f2f2f2;
 }
 
-/* Customer Reviews */
-.customer-reviews {
-  text-align: center;
-  background: #f9f9f9;
-}
-
-.review {
-  background: white;
-  padding: 15px;
-  margin: 10px auto;
-  width: 60%;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.review p {
-  font-size: 1.1em;
-  color: #444;
-}
 
 /* Floating Objects */
 .floating-object {
@@ -1350,10 +1331,6 @@ section {
 
   .desk-benefits ul li {
     font-size: 1em;
-  }
-
-  .review {
-    width: 90%;
   }
 
   .floating-object {
@@ -1562,7 +1539,7 @@ section {
 }
 
 .benefit a.cta-btn:hover {
-  background-color: #e65c00;
+  background-color: #9300e6;
 }
 
 /* Reverse Layout */
@@ -2337,7 +2314,7 @@ section {
 }
 
 .footer-links ul li a:hover {
-  color: #4caf50;
+  color: #9049c1;
 }
 
 .social-links {
@@ -2378,6 +2355,7 @@ section {
     margin-bottom: 20px;
   }
 
+
   .footer-about h2 {
     font-size: 1.6em;
   }
@@ -2385,10 +2363,14 @@ section {
   .footer-links ul li a {
     font-size: 1.2em;
   }
+  .social-links{
+    justify-content: center;
+  }
 
   .social-icon {
     font-size: 1.8em;
   }
+
 }
 
 /* Footer end  */
