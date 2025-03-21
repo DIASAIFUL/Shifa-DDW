@@ -1267,7 +1267,6 @@ section {
   background: #f2f2f2;
 }
 
-
 /* Floating Objects */
 .floating-object {
   position: absolute;
@@ -1642,6 +1641,11 @@ section {
   width: 100%;
   text-align: center;
   height: 300px;
+  display: none;
+  text-align: center;
+  font-size: 16px;
+  color: red;
+  margin-top: 10px;
 }
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -2355,7 +2359,6 @@ section {
     margin-bottom: 20px;
   }
 
-
   .footer-about h2 {
     font-size: 1.6em;
   }
@@ -2363,14 +2366,13 @@ section {
   .footer-links ul li a {
     font-size: 1.2em;
   }
-  .social-links{
+  .social-links {
     justify-content: center;
   }
 
   .social-icon {
     font-size: 1.8em;
   }
-
 }
 
 /* Footer end  */
