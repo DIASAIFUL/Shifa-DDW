@@ -1,94 +1,65 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Hamburger menu toggle
-//   const hamburger = document.querySelector(".hamburger");
-//   const navLinks = document.querySelector(".nav-links");
-
-//   if (hamburger && navLinks) {
-//     hamburger.addEventListener("click", function () {
-//       navLinks.classList.toggle("active");
-//       hamburger.classList.toggle("active"); // Toggle icon change
-//     });
-//   }
-
-
-// Get the modal, close button, and "Okay" button
+document.addEventListener("DOMContentLoaded", function () {
+  
+  // Modal Functionality
 var modal = document.getElementById("helloModal");
-var closeBtn = document.getElementsByClassName("close")[0];
+var closeBtn = document.querySelector(".close");
 var okButton = document.getElementById("okButton");
 
-// Show the modal when the page loads
-window.onload = function() {
+if (modal) {
   modal.style.display = "block";
-};
 
-// Close the modal when the user clicks on the "×" button
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-};
-
-// Close the modal when the user clicks the "Okay" button
-okButton.onclick = function() {
-  modal.style.display = "none";
-};
-
-// Close the modal if the user clicks anywhere outside the modal content
-window.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
-
-
-
-  // Handle the form submission (contact form)
-// Handle the form submission (contact form)
-const form = document.getElementById("contactForm"); // Target the form by ID
-
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();  // Prevent form submission (no page reload)
-
-    // Show a confirmation message
-    alert("Thank you for contacting us! We will get back to you soon.");
-
-    form.reset(); // Reset the form
-  });
-}
-
-  // Handle the 'Add to Cart' button click
-  const addToCartButton = document.querySelector(".add-to-cart-btn");
-  if (addToCartButton) {
-    addToCartButton.addEventListener("click", function () {
-      // Show a pop-up message
-      alert("Item has been added to your cart!");
-
-      // Change button text to "Already Added"
-      addToCartButton.innerText = "Already Added";
-      addToCartButton.disabled = true; // Disable the button after click
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
     });
   }
 
+  if (okButton) {
+    okButton.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  }
 
-  // Handle the 'Place Order' button click (for checkout)
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+
+  //  Contact Form Submission
+  const form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you for contacting us! We will get back to you soon.");
+      form.reset();
+    });
+  }
+
+  //  "Add to Cart" Button Click (For Multiple Buttons)
+  const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+  addToCartButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      alert("Item has been added to your cart!");
+      button.innerText = "Already Added";
+      button.disabled = true;
+    });
+  });
+
+  //  Checkout
   const checkoutButton = document.querySelector(".Order-btn");
   if (checkoutButton) {
     checkoutButton.addEventListener("click", function (e) {
-      e.preventDefault();  // Prevent default form submission
-
-      // Check if the form is valid (all required fields filled)
+      e.preventDefault();
       const form = document.querySelector(".checkout-form");
+
       if (form && form.checkValidity()) {
-        // Show a success message
         alert("Order placed successfully! Thank you for your purchase.");
-
-        // Reset the form after submission
         form.reset();
-
-        // Disable the 'Place Order' button and change its text
         checkoutButton.disabled = true;
         checkoutButton.textContent = "Order Completed";
       } else {
-        // If form is invalid, show a validation message
         alert("Please fill in all required fields.");
       }
     });
@@ -96,14 +67,37 @@ if (form) {
 
 
 
+  // Login Form Submission
+  const loginbutton = document.getElementById("loginForm");
+  if (loginbutton) {
+    loginbutton.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Login successful! Welcome back!");
+      loginbutton.reset();
+    });
+  }
+
+    // Login Form Submission
+    const signupbutton = document.getElementById("SignupForm");
+    if (signupbutton) {
+      signupbutton.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Sign Up successfully Complete! Log In Now..");
+        signupbutton.reset();
+      });
+    }
 
 // Product Search Function
+const searchInput = document.getElementById("product-search");
+const noResultsMessage = document.getElementById("no-results");
 
+if (searchInput) {
+  searchInput.addEventListener("input", searchProducts);
+}
 
 function searchProducts() {
-  let input = document.getElementById("product-search").value.toLowerCase();
+  let input = searchInput.value.toLowerCase();
   let products = document.querySelectorAll(".w3-container p");
-  let noResultsMessage = document.getElementById("no-results"); 
   let hasResults = false;
 
   products.forEach((product) => {
@@ -126,66 +120,7 @@ function searchProducts() {
   }
 }
 
+});
 
-
-
-
-
-// let currentIndex = 0;
-// const slides = document.querySelectorAll(".slide");
-// const dots = document.querySelectorAll(".dot");
-
-// function showSlide(index) {
-//   slides.forEach((slide, i) => {
-//     slide.classList.remove("active");
-//     dots[i].classList.remove("active");
-//   });
-
-//   slides[index].classList.add("active");
-//   dots[index].classList.add("active");
-//   currentIndex = index;
-// }
-
-// function nextSlide() {
-//   currentIndex = (currentIndex + 1) % slides.length;
-//   showSlide(currentIndex);
-// }
-
-// // Auto-slide every 5 seconds
-// setInterval(nextSlide, 5000);
-
-// // Manual control with dots
-// function setSlide(index) {
-//   showSlide(index);
-// }
-
-// // Show first slide
-// showSlide(currentIndex);
-
-// // slide show end 
-
-
-
-// var modal = document.getElementById("helloModal");
-// var closeBtn = document.getElementsByClassName("close")[0];
-// var okButton = document.getElementById("okButton");
-
-// // Show modal on page load
-// window.onload = function() {
-//   modal.style.display = "block";
-//   setTimeout(function() {
-//     modal.querySelector(".modal-content").style.opacity = "1";
-//     modal.querySelector(".modal-content").style.transform = "translateY(0)";
-//   }, 100);
-// };
-
-// // Close modal when the user clicks on the "x" button
-// closeBtn.onclick = function() {
-//   modal.style.display = "none";
-// };
-
-// okButton.onclick = function() {
-//     modal.style.display = "none";
-//   };
 
 

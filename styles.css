@@ -228,21 +228,45 @@ a.cart-btn {
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  opacity: 0;
-  animation: fadeInTitle 2s forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  color: white;
+  animation: typing 8s steps(30, end) infinite, 
+            blink 0.6s infinite, 
+            colorChange 1s infinite;
+  display: inline-block;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes colorChange {
+  0%, 100% {
+      color: #fff;
+  }
+  50% {
+      color: #ff4c39;
+  }
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  margin-bottom: 30px;
-  opacity: 0;
-  animation: fadeInSubtitle 3s forwards;
+  margin-top: 10px;
+  font-weight: 400;
 }
 
+
 .hero .cta-btn {
+  margin-top: 10px;
   padding: 15px 30px;
   background-color: rgb(157, 0, 230);
   color: white;
@@ -256,28 +280,6 @@ a.cart-btn {
   background-color: #ff4c39;
 }
 
-/* Fade-in animations for title and subtitle */
-@keyframes fadeInTitle {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInSubtitle {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* Hover effect for background image */
 .hero:hover {
@@ -1548,17 +1550,31 @@ section {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+  .benefit h2{
+    text-align: center;
+  }
+
+  .benefit p{
+    text-align: center;
+  }
+  .image-wrapper {
+    margin-top:10px ;
+    
+  }
+
   .benefit {
     padding: 40px;
   }
 
   .benefit .text {
     width: 50%;
+    align-items: center;
   }
 
   .benefit img {
     width: 50%;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -1641,10 +1657,13 @@ section {
   width: 100%;
   text-align: center;
   height: 300px;
-  display: none;
-  text-align: center;
-  font-size: 16px;
-  color: red;
+}
+
+.serch-error-box p{
+  display: none; 
+  text-align: center; 
+  font-size: 16px; 
+  color: red; 
   margin-top: 10px;
 }
 /* Responsive Adjustments */
@@ -2258,6 +2277,7 @@ section {
   }
 }
 
+
 /* Footer section Css  */
 
 /* Footer Styling */
@@ -2376,3 +2396,125 @@ section {
 }
 
 /* Footer end  */
+
+
+/* Login Page Css Start */
+.login-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: rgb(244, 240, 249);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.932);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  font-size: 16px;
+  width: 100%;
+  padding: 12px;
+  background-color: #4f51ec;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #339e57;
+}
+
+.login-container .form-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-btn {
+  text-decoration: none;
+  background-color: #f44336;
+  font-size: 16px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.back-btn:hover {
+  background-color: #fff;
+  border: 2px solid #cc0000;
+  color: red;
+}
+
+
+
+p {
+  margin-top: 15px;
+}
+
+/* Google Login Button */
+.google-btn {
+  font-weight: bold;
+  width: 100%;
+  padding: 12px;
+  background-color: #F49542;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.google-btn:hover {
+  background-color: #9135e8;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .login-container {
+      padding: 20px;
+      width: 90%;
+  }
+
+  h2 {
+      font-size: 1.8rem;
+  }
+
+  input {
+      font-size: 1rem;
+  }
+
+  .login-btn, .google-btn, .back-btn {
+      font-size: 1rem;
+  }
+}
+
+/* login Page css End */
