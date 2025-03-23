@@ -230,31 +230,39 @@ a.cart-btn {
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
+  color: white;
   white-space: nowrap;
   overflow: hidden;
-  color: white;
-  animation: typing 8s steps(30, end) infinite, 
-            blink 0.6s infinite, 
-            colorChange 1s infinite;
+  animation: typing 8s steps(30, end) infinite, blink 0.6s infinite,
+    colorChange 1s infinite;
   display: inline-block;
 }
 
 @keyframes typing {
-  0% { width: 0; }
-  50% { width: 100%; }
-  100% { width: 0; }
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 @keyframes colorChange {
-  0%, 100% {
-      color: #fff;
+  0%,
+  100% {
+    color: #fff;
   }
   50% {
-      color: #ff4c39;
+    color: #ff4c39;
   }
 }
 
@@ -263,7 +271,6 @@ a.cart-btn {
   margin-top: 10px;
   font-weight: 400;
 }
-
 
 .hero .cta-btn {
   margin-top: 10px;
@@ -279,7 +286,6 @@ a.cart-btn {
 .hero .cta-btn:hover {
   background-color: #ff4c39;
 }
-
 
 /* Hover effect for background image */
 .hero:hover {
@@ -433,6 +439,7 @@ a.cart-btn {
     max-width: 90%;
     text-align: center;
   }
+
 }
 
 @media (max-width: 480px) {
@@ -1550,16 +1557,15 @@ section {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-  .benefit h2{
+  .benefit h2 {
     text-align: center;
   }
 
-  .benefit p{
+  .benefit p {
     text-align: center;
   }
   .image-wrapper {
-    margin-top:10px ;
-    
+    margin-top: 10px;
   }
 
   .benefit {
@@ -1574,7 +1580,6 @@ section {
   .benefit img {
     width: 50%;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -1659,11 +1664,11 @@ section {
   height: 20px;
 }
 
-.serch-error-box-home p{
-  display: none; 
-  text-align: center; 
-  font-size: 16px; 
-  color: red; 
+.serch-error-box-home p {
+  display: none;
+  text-align: center;
+  font-size: 16px;
+  color: red;
   margin-top: 10px;
 }
 
@@ -1673,11 +1678,11 @@ section {
   height: 300px;
 }
 
-.serch-error-box p{
-  display: none; 
-  text-align: center; 
-  font-size: 16px; 
-  color: red; 
+.serch-error-box p {
+  display: none;
+  text-align: center;
+  font-size: 16px;
+  color: red;
   margin-top: 10px;
 }
 /* Responsive Adjustments */
@@ -1692,7 +1697,7 @@ section {
   }
 }
 
-/* new slide show code  */
+/*  slide show code  */
 .special-offer-slider {
   position: relative;
   max-width: 100%;
@@ -2291,7 +2296,6 @@ section {
   }
 }
 
-
 /* Footer section Css  */
 
 /* Footer Styling */
@@ -2411,7 +2415,6 @@ section {
 
 /* Footer end  */
 
-
 /* Login Page Css Start */
 .login-main-container {
   display: flex;
@@ -2477,14 +2480,11 @@ section {
   border-radius: 5px;
 }
 
-
 .back-btn:hover {
   background-color: #fff;
   border: 2px solid #cc0000;
   color: red;
 }
-
-
 
 p {
   margin-top: 15px;
@@ -2495,7 +2495,7 @@ p {
   font-weight: bold;
   width: 100%;
   padding: 12px;
-  background-color: #F49542;
+  background-color: #f49542;
   color: white;
   border: none;
   border-radius: 5px;
@@ -2514,20 +2514,22 @@ p {
 /* Responsive Design */
 @media (max-width: 600px) {
   .login-container {
-      padding: 20px;
-      width: 90%;
+    padding: 20px;
+    width: 90%;
   }
 
   h2 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
 
   input {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
-  .login-btn, .google-btn, .back-btn {
-      font-size: 1rem;
+  .login-btn,
+  .google-btn,
+  .back-btn {
+    font-size: 1rem;
   }
 }
 
